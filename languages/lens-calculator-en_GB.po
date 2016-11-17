@@ -1,0 +1,148 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lenscalculator\n"
+"POT-Creation-Date: 2016-09-23 18:48+0200\n"
+"PO-Revision-Date: 2016-09-24 12:02+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: lenscalculator.php\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: lenscalculator.php:47
+msgid "Formaat CCD element graag invullen."
+msgstr "Format CCD element please fill."
+
+#: lenscalculator.php:48
+msgid "Afstand tot object graag invullen."
+msgstr "Distance please fill object."
+
+#: lenscalculator.php:49
+msgid "Hoogte van het object graag invullen."
+msgstr "Height of the object please fill."
+
+#: lenscalculator.php:50
+msgid "Breedte van het object graag invullen."
+msgstr "Width of the object please fill."
+
+#: lenscalculator.php:51
+msgid "NNB"
+msgstr "n.y.k."
+
+#. Plugin Name of the plugin/theme
+#: lenscalculator.php:80
+msgid "Lens Calculator"
+msgstr "Lens Calculator"
+
+#: lenscalculator.php:81
+msgid ""
+"De onderstaande lenscalculator kan op twee manieren toegepast worden. U kunt "
+"de afstand tot het object bepalen door gebruik te maken van de totale "
+"breedte van het object, of door de totale hoogte van het object. Het formaat "
+"van het CCD of CMOS element staat meestal bij de specificaties van de camera "
+"weergegeven."
+msgstr ""
+"The following lens calculator can be applied in two ways. You can determine "
+"the distance to the object by using the total width of the object, or the "
+"total height of the object. The size of the CCD or CMOS element is usually "
+"displayed on the camera's specifications."
+
+#: lenscalculator.php:82
+msgid "Berekening naar breedte object"
+msgstr "Calculation to object width"
+
+#: lenscalculator.php:84 lenscalculator.php:99
+msgid "Stap 1: Kies het formaat"
+msgstr "Step 1: Choose the format"
+
+#: lenscalculator.php:85 lenscalculator.php:100
+msgid "Kies formaat CCD of CMOS"
+msgstr "Choose format CCD or CMOS"
+
+#: lenscalculator.php:85 lenscalculator.php:100
+msgid "1 inch"
+msgstr "1 inch"
+
+#: lenscalculator.php:85 lenscalculator.php:100
+msgid "2/3 inch"
+msgstr "2/3 inch"
+
+#: lenscalculator.php:85 lenscalculator.php:100
+msgid "1/2 inch"
+msgstr "1/2 inch"
+
+#: lenscalculator.php:85 lenscalculator.php:100
+msgid "1/3 inch"
+msgstr "1/3 inch"
+
+#: lenscalculator.php:85 lenscalculator.php:100
+msgid "1/4 inch"
+msgstr "1/4 inch"
+
+#: lenscalculator.php:86 lenscalculator.php:101
+msgid "Stap 2: Wat is de afstand tot het object?"
+msgstr "Step 2: What is the distance to the object?"
+
+#: lenscalculator.php:88 lenscalculator.php:91 lenscalculator.php:103
+#: lenscalculator.php:106
+msgid "Alleen hele meters gebruiken"
+msgstr "Use only whole meters"
+
+#: lenscalculator.php:89
+msgid "Stap 3: Wat is de breedte van het object?"
+msgstr "Step 3: What is the width of the object?"
+
+#: lenscalculator.php:92 lenscalculator.php:107
+msgid "Berekenen"
+msgstr "Compute"
+
+#: lenscalculator.php:92 lenscalculator.php:107
+msgid "Nieuwe berekening"
+msgstr "Reset"
+
+#: lenscalculator.php:95 lenscalculator.php:110
+msgid "Gebruik een"
+msgstr "Use a"
+
+#: lenscalculator.php:95 lenscalculator.php:110
+msgid "mm objectief"
+msgstr "mm lens"
+
+#: lenscalculator.php:97
+msgid "Berekening naar hoogte object"
+msgstr "Calculation to object height"
+
+#: lenscalculator.php:104
+msgid "Stap 3: Wat is de hoogte van het object?"
+msgstr "Step 3: What is the height of the object?"
+
+#. Description of the plugin/theme
+msgid ""
+"De lenscalculator kan op twee manieren toegepast worden. U kunt de afstand "
+"tot het object bepalen door gebruik te maken van de totale breedte van het "
+"object, of door de totale hoogte van het object. Het formaat van het CCD of "
+"CMOS element staat meestal bij de specificaties van de camera weergegeven."
+msgstr ""
+"The lens calculator can be applied in two ways. You can determine the "
+"distance to the object by using the total width of the object, or the total "
+"height of the object. The size of the CCD or CMOS element is usually "
+"displayed on the camera's specifications."
+
+#. Author of the plugin/theme
+msgid "Zaanmedia"
+msgstr "Zaanmedia"
+
+#. Author URI of the plugin/theme
+msgid "http://zaanmedia.com"
+msgstr "http://zaanmedia.com"

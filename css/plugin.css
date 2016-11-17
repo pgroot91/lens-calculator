@@ -1,0 +1,30 @@
+input.button {
+	width: inherit;
+	margin-right: 10px;
+}
+input.wplc_field {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 15px;
+}
+input.output {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin: 0 10px;
+	color: #000;
+}
+select.wplc_select {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 10px;
+	margin-bottom: 20px;
+}
+p.small {
+	font-size: 12px;
+}
+p.stap {
+	margin-bottom: 10px;
+}
