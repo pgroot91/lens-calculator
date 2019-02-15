@@ -2,7 +2,7 @@
 Tags: cctv, lens, calculator, tools, security, camera, help, correct lenses
 Contributors: Zaanmedia
 Requires at least: 4.6
-Tested up to: 4.9.8
+Tested up to: 5.1.0
 Stable tag: 4.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -40,6 +40,10 @@ You can use the following shortcodes for displaying the lens calculator.
 3. <strong><code>[width-calculator]</code></strong> This shortcode shows only the "Calculation to object width" form. 
 
 == Changelog ==
+
+= 2.0.0 =
+* Blocks for Gutenberg support
+* Adding more languages
 
 = 1.0.1 =
 * Plugin small fix in the link structure of js/css
