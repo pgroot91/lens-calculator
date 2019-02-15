@@ -42,7 +42,7 @@ You can use the following shortcodes for displaying the lens calculator.
 == Changelog ==
 
 = 2.0.0 =
-* Blocks for Gutenberg support
+* Adding blocks for Gutenberg support
 * Adding more languages
 
 = 1.0.1 =
