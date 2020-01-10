@@ -41,10 +41,6 @@ You can use the following shortcodes for displaying the lens calculator.
 
 == Changelog ==
 
-= 2.0.0 =
-* Adding blocks for Gutenberg support
-* Adding more languages
-
 = 1.0.1 =
 * Plugin small fix in the link structure of js/css
 
