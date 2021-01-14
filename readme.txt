@@ -4,8 +4,8 @@ Contributors: patrickgroot, krafit, pidengmor
 Collaborators: patrickgroot, krafit, pidengmor
 Requires at least: 4.6
 Tested up to: 5.6.0
-Stable tag: 1.0.2
-Version: 1.0.2
+Stable tag: 1.0.3
+Version: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,9 @@ You can use the following shortcodes for displaying the lens calculator.
 3. <strong><code>[width-calculator]</code></strong> This shortcode shows only the "Calculation to object width" form. 
 
 == Changelog ==
+
+= 1.0.3 =
+* Small changes made to form and fields.
 
 = 1.0.2 =
 * A small rewrite on some parts of the plugin with some additional fixes.
