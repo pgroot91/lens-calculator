@@ -1,9 +1,10 @@
 === CCTV Lens Calculator ===
 Tags: cctv, lens, calculator, tools, security, camera, help, correct lenses
-Contributors: Zaanmedia
+Contributors: Patrick Groot
 Requires at least: 4.6
-Tested up to: 5.1.0
+Tested up to: 5.6.0
 Stable tag: 4.5
+Version: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,10 +42,13 @@ You can use the following shortcodes for displaying the lens calculator.
 
 == Changelog ==
 
+= 1.0.2 =
+* A small rewrite on some parts of the plugin with some additional fixes.
+
 = 1.0.1 =
-* Plugin small fix in the link structure of js/css
+* Plugin small fix in the link structure of js/css.
 
 = 1.0 =
-* Initial version
+* Initial version.
 
 == Upgrade Notice ==

@@ -2,11 +2,11 @@
 
 /**
 * Plugin Name: Lens Calculator  
-* Plugin URI: http://zaanmedia.com
+* Plugin URI: http://patrickgroot.com
 * Description: De lenscalculator kan op twee manieren toegepast worden. U kunt de afstand tot het object bepalen door gebruik te maken van de totale breedte van het object, of door de totale hoogte van het object. Het formaat van het CCD of CMOS element staat meestal bij de specificaties van de camera weergegeven.
-* Version: 1.0.1
-* Author: Zaanmedia
-* Author URI: http://zaanmedia.com
+* Version: 1.0.2
+* Author: Patrick Groot
+* Author URI: http://patrickgroot.com
 * Text Domain: lens-calculator
 * Domain Path: /languages
 * License: GPL v2
