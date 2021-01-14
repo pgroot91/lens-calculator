@@ -95,9 +95,7 @@ function wplc_full_calculator() {
 	echo '<p class="stap"><strong>' . __( 'Stap 3: Wat is de breedte van het object?', 'lens-calculator' ) . '</strong></p>';
 	echo '<input name="objectbreedte" class="wplc_field" size="5" />';
 	echo '<p class="small">' . __( 'Alleen hele meters gebruiken', 'lens-calculator' ) . '<p>';
-	echo '<input class="button" onclick=compute_it_breedte() type="button" value="' . __( 'Berekenen', 'lens-calculator' ) . '" name="' . __( 'Berekenen', 'lens-calculator' ) . '" /><input class="button" onclick="window.location.reload()" type="reset" value="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" name="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" />';
-	echo '</form>';
-	echo '<form name=totalbreedte>';
+	echo '<input class="button" onclick=compute_it_breedte() type="button" value="' . __( 'Berekenen', 'lens-calculator' ) . '" name="' . __( 'Berekenen', 'lens-calculator' ) . '" /><input class="button" type="reset" value="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" name="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" />';
 	echo '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input name="output" class="output" size="5" disabled/>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	echo '</form>';
 	echo '<h3>' . __( 'Berekening naar hoogte object', 'lens-calculator' ) . '</h3>';
@@ -110,9 +108,7 @@ function wplc_full_calculator() {
 	echo '<p class="stap"><strong>' . __( 'Stap 3: Wat is de hoogte van het object?', 'lens-calculator' ) . '</strong></p>';
 	echo '<input name="objecthoogte" class="wplc_field" size="5" />';
 	echo '<p class="small">' . __( 'Alleen hele meters gebruiken', 'lens-calculator' ) . '<p>';
-	echo '<input class="button" onclick=compute_it_hoogte() type="button" value="' . __( 'Berekenen', 'lens-calculator' ) . '" name="' . __( 'Berekenen', 'lens-calculator' ) . '" /><input class="button" onclick="window.location.reload()" type="reset" value="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" name="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" />';
-	echo '</form>';
-	echo '<form name=totalhoogte>';
+	echo '<input class="button" onclick=compute_it_hoogte() type="button" value="' . __( 'Berekenen', 'lens-calculator' ) . '" name="' . __( 'Berekenen', 'lens-calculator' ) . '" /><input class="button" type="reset" value="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" name="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" />';
 	echo '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input name="output" class="output" size="5" disabled/>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	echo '</form>';
 }
@@ -128,9 +124,7 @@ function wplc_width_calculator() {
 	echo '<p class="stap"><strong>' . __( 'Stap 3: Wat is de breedte van het object?', 'lens-calculator' ) . '</strong></p>';
 	echo '<input name="objectbreedte" class="wplc_field" size="5" />';
 	echo '<p class="small">' . __( 'Alleen hele meters gebruiken', 'lens-calculator' ) . '<p>';
-	echo '<input class="button" onclick=compute_it_breedte() type="button" value="' . __( 'Berekenen', 'lens-calculator' ) . '" name="' . __( 'Berekenen', 'lens-calculator' ) . '" /><input class="button" onclick="window.location.reload()" type="reset" value="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" name="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" />';
-	echo '</form>';
-	echo '<form name=totalbreedte>';
+	echo '<input class="button" onclick=compute_it_breedte() type="button" value="' . __( 'Berekenen', 'lens-calculator' ) . '" name="' . __( 'Berekenen', 'lens-calculator' ) . '" /><input class="button" type="reset" value="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" name="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" />';
 	echo '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input name="output" class="output" size="5" disabled/>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	echo '</form>';
 }
@@ -146,9 +140,7 @@ function wplc_height_calculator() {
 	echo '<p class="stap"><strong>' . __( 'Stap 3: Wat is de hoogte van het object?', 'lens-calculator' ) . '</strong></p>';
 	echo '<input name="objecthoogte" class="wplc_field" size="5" />';
 	echo '<p class="small">' . __( 'Alleen hele meters gebruiken', 'lens-calculator' ) . '<p>';
-	echo '<input class="button" onclick=compute_it_hoogte() type="button" value="' . __( 'Berekenen', 'lens-calculator' ) . '" name="' . __( 'Berekenen', 'lens-calculator' ) . '" /><input class="button" onclick="window.location.reload()" type="reset" value="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" name="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" />';
-	echo '</form>';
-	echo '<form name=totalhoogte>';
+	echo '<input class="button" onclick=compute_it_hoogte() type="button" value="' . __( 'Berekenen', 'lens-calculator' ) . '" name="' . __( 'Berekenen', 'lens-calculator' ) . '" /><input class="button" type="reset" value="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" name="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" />';
 	echo '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input name="output" class="output" size="5" disabled/>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	echo '</form>';
 }
