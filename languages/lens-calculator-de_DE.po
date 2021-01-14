@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Lenscalulator\n"
-"POT-Creation-Date: 2016-09-24 12:02+0200\n"
-"PO-Revision-Date: 2016-09-24 12:04+0200\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2021-01-14 14:31+0100\n"
+"PO-Revision-Date: 2021-01-14 14:31+0100\n"
+"Last-Translator: Patrick Groot <info@patrickgroot.com>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -22,30 +22,29 @@ msgstr ""
 
 #: lenscalculator.php:47
 msgid "Formaat CCD element graag invullen."
-msgstr "CCD-Format füllen Sie bitte Element."
+msgstr "CCD-Format, bitte ausfüllen."
 
 #: lenscalculator.php:48
 msgid "Afstand tot object graag invullen."
-msgstr "Die Entfernung füllen Sie bitte Objekt."
+msgstr "Abstand vom Objekt, bitte ausfüllen."
 
 #: lenscalculator.php:49
 msgid "Hoogte van het object graag invullen."
-msgstr "Höhe des Objekts, füllen Sie bitte."
+msgstr "Höhe des Objekts, bitte ausfüllen."
 
 #: lenscalculator.php:50
 msgid "Breedte van het object graag invullen."
-msgstr "Breite des Objekts, füllen Sie bitte."
+msgstr "Breite des Objekts, bitte ausfüllen."
 
 #: lenscalculator.php:51
 msgid "NNB"
 msgstr "n.n.b."
 
-#. Plugin Name of the plugin/theme
-#: lenscalculator.php:80
+#: lenscalculator.php:86
 msgid "Lens Calculator"
 msgstr "Lens Calculator"
 
-#: lenscalculator.php:81
+#: lenscalculator.php:87
 msgid ""
 "De onderstaande lenscalculator kan op twee manieren toegepast worden. U kunt "
 "de afstand tot het object bepalen door gebruik te maken van de totale "
@@ -53,79 +52,101 @@ msgid ""
 "van het CCD of CMOS element staat meestal bij de specificaties van de camera "
 "weergegeven."
 msgstr ""
-"Die folgende Linse Rechner kann auf zwei Arten angewendet werden. Sie können "
+"Die folgende Linse Rechner kann auf zwei Arten angewendet werden. Du kannst "
 "über die gesamte Breite des Objekts, oder die Gesamthöhe des Objekts der "
-"Abstand zum Objekt zu bestimmen. Die Größe des CCD oder CMOS-Element ist in "
+"Abstand zum Objekt  bestimmen. Die Größe des CCD oder CMOS-Element ist in "
 "der Regel auf den Spezifikationen der Kamera angezeigt."
 
-#: lenscalculator.php:82
+#: lenscalculator.php:88 lenscalculator.php:117
 msgid "Berekening naar breedte object"
 msgstr "Berechnung auf Objektbreite"
 
-#: lenscalculator.php:84 lenscalculator.php:99
+#: lenscalculator.php:90 lenscalculator.php:103 lenscalculator.php:119
+#: lenscalculator.php:135
 msgid "Stap 1: Kies het formaat"
-msgstr "Schritt 1: Wählen Sie das Format"
+msgstr "Schritt 1: Wähle das Format"
 
-#: lenscalculator.php:85 lenscalculator.php:100
+#: lenscalculator.php:91 lenscalculator.php:104 lenscalculator.php:120
+#: lenscalculator.php:136
 msgid "Kies formaat CCD of CMOS"
 msgstr "Format wählen CCD- oder CMOS"
 
-#: lenscalculator.php:85 lenscalculator.php:100
+#: lenscalculator.php:91 lenscalculator.php:104 lenscalculator.php:120
+#: lenscalculator.php:136
 msgid "1 inch"
 msgstr "1 Zoll"
 
-#: lenscalculator.php:85 lenscalculator.php:100
+#: lenscalculator.php:91 lenscalculator.php:104 lenscalculator.php:120
+#: lenscalculator.php:136
 msgid "2/3 inch"
 msgstr "2/3 Zoll"
 
-#: lenscalculator.php:85 lenscalculator.php:100
+#: lenscalculator.php:91 lenscalculator.php:104 lenscalculator.php:120
+#: lenscalculator.php:136
 msgid "1/2 inch"
 msgstr "1/2 Zoll"
 
-#: lenscalculator.php:85 lenscalculator.php:100
+#: lenscalculator.php:91 lenscalculator.php:104 lenscalculator.php:120
+#: lenscalculator.php:136
 msgid "1/3 inch"
 msgstr "1/3 Zoll"
 
-#: lenscalculator.php:85 lenscalculator.php:100
+#: lenscalculator.php:91 lenscalculator.php:104 lenscalculator.php:120
+#: lenscalculator.php:136
 msgid "1/4 inch"
 msgstr "1/4 Zoll"
 
-#: lenscalculator.php:86 lenscalculator.php:101
+#: lenscalculator.php:92 lenscalculator.php:105 lenscalculator.php:121
+#: lenscalculator.php:137
 msgid "Stap 2: Wat is de afstand tot het object?"
 msgstr "Schritt 2: Was ist der Abstand zum Objekt?"
 
-#: lenscalculator.php:88 lenscalculator.php:91 lenscalculator.php:103
-#: lenscalculator.php:106
+#: lenscalculator.php:94 lenscalculator.php:97 lenscalculator.php:107
+#: lenscalculator.php:110 lenscalculator.php:123 lenscalculator.php:126
+#: lenscalculator.php:139 lenscalculator.php:142
 msgid "Alleen hele meters gebruiken"
-msgstr "Verwenden Sie nur ganze Meter"
+msgstr "Verwende nur ganze Meter"
 
-#: lenscalculator.php:89
+#: lenscalculator.php:95 lenscalculator.php:124
 msgid "Stap 3: Wat is de breedte van het object?"
 msgstr "Schritt 3: Was ist die Breite des Objekts?"
 
-#: lenscalculator.php:92 lenscalculator.php:107
+#: lenscalculator.php:98 lenscalculator.php:111 lenscalculator.php:127
+#: lenscalculator.php:143
 msgid "Berekenen"
 msgstr "Berechnen"
 
-#: lenscalculator.php:92 lenscalculator.php:107
+#: lenscalculator.php:98 lenscalculator.php:111 lenscalculator.php:127
+#: lenscalculator.php:143
 msgid "Nieuwe berekening"
 msgstr "Neuberechnung"
 
-#: lenscalculator.php:95 lenscalculator.php:110
+#: lenscalculator.php:99 lenscalculator.php:112 lenscalculator.php:128
+#: lenscalculator.php:144
 msgid "Gebruik een"
-msgstr "Verwenden Sie ein"
+msgstr "Verwende ein"
 
-#: lenscalculator.php:95 lenscalculator.php:110
+#: lenscalculator.php:99 lenscalculator.php:112 lenscalculator.php:128
+#: lenscalculator.php:144
 msgid "mm objectief"
 msgstr "mm-Objektiv"
 
-#: lenscalculator.php:97
+#: lenscalculator.php:101 lenscalculator.php:133
 msgid "Berekening naar hoogte object"
 msgstr "Berechnung Objekt Höhe"
 
-#: lenscalculator.php:104
+#: lenscalculator.php:108 lenscalculator.php:140
 msgid "Stap 3: Wat is de hoogte van het object?"
 msgstr "Schritt 3: Was ist die Höhe des Objekts?"
+
+#. Plugin Name of the plugin/theme
+msgid "CCTV Lens Calculator"
+msgstr "CCTV Lens Calculator"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://patrickgroot.com"
+msgstr "http://patrickgroot.com"
 
 #. Description of the plugin/theme
 msgid ""
@@ -140,12 +161,14 @@ msgstr ""
 "auf den Spezifikationen der Kamera angezeigt."
 
 #. Author of the plugin/theme
-msgid "Zaanmedia"
-msgstr "Zaanmedia"
+msgid "Patrick Groot"
+msgstr "Patrick Groot"
 
-#. Author URI of the plugin/theme
-msgid "http://zaanmedia.com"
-msgstr "http://zaanmedia.com"
+#~ msgid "Zaanmedia"
+#~ msgstr "Zaanmedia"
+
+#~ msgid "http://zaanmedia.com"
+#~ msgstr "http://zaanmedia.com"
 
 #~ msgid "Lenscalculator"
 #~ msgstr "Objektivrechner"
