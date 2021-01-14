@@ -86,27 +86,27 @@ function wplc_full_calculator() {
 	echo '<h1>' . __( 'Lens Calculator', 'lens-calculator' ) . '</h1>';
 	echo '<p>' . __( 'De onderstaande lenscalculator kan op twee manieren toegepast worden. U kunt de afstand tot het object bepalen door gebruik te maken van de totale breedte van het object, of door de totale hoogte van het object. Het formaat van het CCD of CMOS element staat meestal bij de specificaties van de camera weergegeven.', 'lens-calculator' ) . '</p>';
 	echo '<h3>' . __( 'Berekening naar breedte object', 'lens-calculator' ) . '</h3>';
-	echo '<form name="breedte">';
+	echo '<form name="breedte" autocomplete="off">';
 	echo '<p class="stap"><strong>' . __( 'Stap 1: Kies het formaat', 'lens-calculator' ) . '</strong></p>';
 	echo '<select name="answer1" size="1" class="wplc_select"> <option value="0" selected>' . __( 'Kies formaat CCD of CMOS', 'lens-calculator' ) . '</option><option value="1">' . __( '1 inch', 'lens-calculator' ) . '</option> <option value="2">' . __( '2/3 inch', 'lens-calculator' ) . '</option> <option value="3">' . __( '1/2 inch', 'lens-calculator' ) . '</option> <option value="4">' . __( '1/3 inch', 'lens-calculator' ) . '</option> <option value="5">' . __( '1/4 inch', 'lens-calculator' ) . '</option></select>';
 	echo '<p class="stap"><strong>' . __( 'Stap 2: Wat is de afstand tot het object?', 'lens-calculator' ) . '</strong></p>';
-	echo '<input name="objectafstand" class="wplc_field" size="5" />';
+	echo '<input type="number" name="objectafstand" class="wplc_field" size="5" />';
 	echo '<p class="small">' . __( 'Alleen hele meters gebruiken', 'lens-calculator' ) . '<p>';
 	echo '<p class="stap"><strong>' . __( 'Stap 3: Wat is de breedte van het object?', 'lens-calculator' ) . '</strong></p>';
-	echo '<input name="objectbreedte" class="wplc_field" size="5" />';
+	echo '<input type="number" name="objectbreedte" class="wplc_field" size="5" />';
 	echo '<p class="small">' . __( 'Alleen hele meters gebruiken', 'lens-calculator' ) . '<p>';
 	echo '<input class="button" onclick=compute_it_breedte() type="button" value="' . __( 'Berekenen', 'lens-calculator' ) . '" name="' . __( 'Berekenen', 'lens-calculator' ) . '" /><input class="button" type="reset" value="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" name="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" />';
 	echo '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input name="output" class="output" size="5" disabled/>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	echo '</form>';
 	echo '<h3>' . __( 'Berekening naar hoogte object', 'lens-calculator' ) . '</h3>';
-	echo '<form name="hoogte">';
+	echo '<form name="hoogte" autocomplete="off">';
 	echo '<p class="stap"><strong>' . __( 'Stap 1: Kies het formaat', 'lens-calculator' ) . '</strong></p>';
 	echo '<select name="answer1" size="1" class="wplc_select"> <option value="0" selected>' . __( 'Kies formaat CCD of CMOS', 'lens-calculator' ) . '</option><option value="1">' . __( '1 inch', 'lens-calculator' ) . '</option> <option value="2">' . __( '2/3 inch', 'lens-calculator' ) . '</option> <option value="3">' . __( '1/2 inch', 'lens-calculator' ) . '</option> <option value="4">' . __( '1/3 inch', 'lens-calculator' ) . '</option> <option value="5">' . __( '1/4 inch', 'lens-calculator' ) . '</option></select>';
 	echo '<p class="stap"><strong>' . __( 'Stap 2: Wat is de afstand tot het object?', 'lens-calculator' ) . '</strong></p>';
-	echo '<input name="objectafstand" class="wplc_field" size="5" />';
+	echo '<input type="number" name="objectafstand" class="wplc_field" size="5" />';
 	echo '<p class="small">' . __( 'Alleen hele meters gebruiken', 'lens-calculator' ) . '<p>';
 	echo '<p class="stap"><strong>' . __( 'Stap 3: Wat is de hoogte van het object?', 'lens-calculator' ) . '</strong></p>';
-	echo '<input name="objecthoogte" class="wplc_field" size="5" />';
+	echo '<input type="number" name="objecthoogte" class="wplc_field" size="5" />';
 	echo '<p class="small">' . __( 'Alleen hele meters gebruiken', 'lens-calculator' ) . '<p>';
 	echo '<input class="button" onclick=compute_it_hoogte() type="button" value="' . __( 'Berekenen', 'lens-calculator' ) . '" name="' . __( 'Berekenen', 'lens-calculator' ) . '" /><input class="button" type="reset" value="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" name="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" />';
 	echo '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input name="output" class="output" size="5" disabled/>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
@@ -115,14 +115,14 @@ function wplc_full_calculator() {
 
 function wplc_width_calculator() {
 	echo '<h3>' . __( 'Berekening naar breedte object', 'lens-calculator' ) . '</h3>';
-	echo '<form name="breedte">';
+	echo '<form name="breedte" autocomplete="off">';
 	echo '<p class="stap"><strong>' . __( 'Stap 1: Kies het formaat', 'lens-calculator' ) . '</strong></p>';
 	echo '<select name="answer1" size="1" class="wplc_select"> <option value="0" selected>' . __( 'Kies formaat CCD of CMOS', 'lens-calculator' ) . '</option><option value="1">' . __( '1 inch', 'lens-calculator' ) . '</option> <option value="2">' . __( '2/3 inch', 'lens-calculator' ) . '</option> <option value="3">' . __( '1/2 inch', 'lens-calculator' ) . '</option> <option value="4">' . __( '1/3 inch', 'lens-calculator' ) . '</option> <option value="5">' . __( '1/4 inch', 'lens-calculator' ) . '</option></select>';
 	echo '<p class="stap"><strong>' . __( 'Stap 2: Wat is de afstand tot het object?', 'lens-calculator' ) . '</strong></p>';
-	echo '<input name="objectafstand" class="wplc_field" size="5" />';
+	echo '<input type="number" name="objectafstand" class="wplc_field" size="5" />';
 	echo '<p class="small">' . __( 'Alleen hele meters gebruiken', 'lens-calculator' ) . '<p>';
 	echo '<p class="stap"><strong>' . __( 'Stap 3: Wat is de breedte van het object?', 'lens-calculator' ) . '</strong></p>';
-	echo '<input name="objectbreedte" class="wplc_field" size="5" />';
+	echo '<input type="number" name="objectbreedte" class="wplc_field" size="5" />';
 	echo '<p class="small">' . __( 'Alleen hele meters gebruiken', 'lens-calculator' ) . '<p>';
 	echo '<input class="button" onclick=compute_it_breedte() type="button" value="' . __( 'Berekenen', 'lens-calculator' ) . '" name="' . __( 'Berekenen', 'lens-calculator' ) . '" /><input class="button" type="reset" value="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" name="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" />';
 	echo '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input name="output" class="output" size="5" disabled/>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
@@ -131,14 +131,14 @@ function wplc_width_calculator() {
 
 function wplc_height_calculator() {
 	echo '<h3>' . __( 'Berekening naar hoogte object', 'lens-calculator' ) . '</h3>';
-	echo '<form name="hoogte">';
+	echo '<form name="hoogte" autocomplete="off">';
 	echo '<p class="stap"><strong>' . __( 'Stap 1: Kies het formaat', 'lens-calculator' ) . '</strong></p>';
 	echo '<select name="answer1" size="1" class="wplc_select"> <option value="0" selected>' . __( 'Kies formaat CCD of CMOS', 'lens-calculator' ) . '</option><option value="1">' . __( '1 inch', 'lens-calculator' ) . '</option> <option value="2">' . __( '2/3 inch', 'lens-calculator' ) . '</option> <option value="3">' . __( '1/2 inch', 'lens-calculator' ) . '</option> <option value="4">' . __( '1/3 inch', 'lens-calculator' ) . '</option> <option value="5">' . __( '1/4 inch', 'lens-calculator' ) . '</option></select>';
 	echo '<p class="stap"><strong>' . __( 'Stap 2: Wat is de afstand tot het object?', 'lens-calculator' ) . '</strong></p>';
-	echo '<input name="objectafstand" class="wplc_field" size="5" />';
+	echo '<input type="number" name="objectafstand" class="wplc_field" size="5" />';
 	echo '<p class="small">' . __( 'Alleen hele meters gebruiken', 'lens-calculator' ) . '<p>';
 	echo '<p class="stap"><strong>' . __( 'Stap 3: Wat is de hoogte van het object?', 'lens-calculator' ) . '</strong></p>';
-	echo '<input name="objecthoogte" class="wplc_field" size="5" />';
+	echo '<input type="number" name="objecthoogte" class="wplc_field" size="5" />';
 	echo '<p class="small">' . __( 'Alleen hele meters gebruiken', 'lens-calculator' ) . '<p>';
 	echo '<input class="button" onclick=compute_it_hoogte() type="button" value="' . __( 'Berekenen', 'lens-calculator' ) . '" name="' . __( 'Berekenen', 'lens-calculator' ) . '" /><input class="button" type="reset" value="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" name="' . __( 'Nieuwe berekening', 'lens-calculator' ) . '" />';
 	echo '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input name="output" class="output" size="5" disabled/>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
