@@ -17,7 +17,7 @@
 /***********************************************************************************************/
 
 function lens_calculator_textdomain() {
-    load_plugin_textdomain( 'lens-calculator', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+	load_plugin_textdomain( 'lens-calculator', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 add_action( 'plugins_loaded', 'lens_calculator_textdomain' );
 
@@ -26,8 +26,11 @@ add_action( 'plugins_loaded', 'lens_calculator_textdomain' );
 /***********************************************************************************************/
 
 function register_lens_calulator_styles() {
+global $post;
+if( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'full-calculator' ) || has_shortcode( $post->post_content, 'width-calculator' ) || has_shortcode( $post->post_content, 'height-calculator' ) ) {
 	wp_register_style( 'lens-calculator', plugins_url( 'lens-calculator/css/plugin.css' ) );
 	wp_enqueue_style( 'lens-calculator' );
+}
 }
 add_action( 'wp_enqueue_scripts', 'register_lens_calulator_styles' );
 
@@ -36,6 +39,8 @@ add_action( 'wp_enqueue_scripts', 'register_lens_calulator_styles' );
 /***********************************************************************************************/
 
 function register_lens_calulator_scripts() {  
+global $post;
+if( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'full-calculator' ) || has_shortcode( $post->post_content, 'width-calculator' ) || has_shortcode( $post->post_content, 'height-calculator' ) ) {
 	// Register the script
 	wp_register_script( 'lens-calculator', plugins_url( 'lens-calculator/js/lens-calculator.js' ) );
 	// Localize the script with new data
@@ -49,7 +54,8 @@ function register_lens_calulator_scripts() {
 	wp_localize_script( 'lens-calculator', 'lens_calculator', $translation_array );
 
 	// Enqueued script with localized data.
-    wp_enqueue_script( 'lens-calculator' );  
+	wp_enqueue_script( 'lens-calculator' );
+}
 }
 add_action( 'wp_enqueue_scripts', 'register_lens_calulator_scripts' );
 
@@ -79,7 +85,7 @@ add_shortcode('full-calculator', 'wplc_volledig_calculator');
 function wplc_full_calculator() {
 	$form = '<h1>' . __( 'Lens Calculator', 'lens-calculator' ) . '</h1>';
 	$form .= '<p>' . __( 'De onderstaande lenscalculator kan op twee manieren toegepast worden. U kunt de afstand tot het object bepalen door gebruik te maken van de totale breedte van het object, of door de totale hoogte van het object. Het formaat van het CCD of CMOS element staat meestal bij de specificaties van de camera weergegeven.', 'lens-calculator' ) . '</p>';
-	
+
 	$form .= '<h3>' . __( 'Berekening naar breedte object', 'lens-calculator' ) . '</h3>';
 	$form .= '<form name="breedte" autocomplete="off">';
 	$form .= '<label for="breedte-answer">' . __( 'Stap 1: Kies het formaat', 'lens-calculator' ) . '</label>';
@@ -95,7 +101,7 @@ function wplc_full_calculator() {
 	$form .= '</div>';
 	$form .= '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input type="text" name="output" class="wplc_field output" size="5" readonly>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	$form .= '</form>';
-	
+
 	$form .= '<h3>' . __( 'Berekening naar hoogte object', 'lens-calculator' ) . '</h3>';
 	$form .= '<form name="hoogte" autocomplete="off">';
 	$form .= '<label for="hoogte-answer">' . __( 'Stap 1: Kies het formaat', 'lens-calculator' ) . '</label>';
@@ -111,7 +117,7 @@ function wplc_full_calculator() {
 	$form .= '</div>';
 	$form .= '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input type="text" name="output" class="wplc_field output" size="5" readonly>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	$form .= '</form>';
-	
+
 	return $form;
 }
 
@@ -131,7 +137,7 @@ function wplc_width_calculator() {
 	$form .= '</div>';
 	$form .= '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input type="text" name="output" class="wplc_field output" size="5" readonly>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	$form .= '</form>';
-	
+
 	return $form;
 }
 
@@ -151,7 +157,7 @@ function wplc_height_calculator() {
 	$form .= '</div>';
 	$form .= '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input type="text" name="output" class="wplc_field output" size="5" readonly>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	$form .= '</form>';
-	
+
 	return $form;
 }
 
