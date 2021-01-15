@@ -28,14 +28,14 @@ function compute_it_hoogte(form) {
     var result3 = parseFloat(document.hoogte.objecthoogte.value);
 
     if (result1 == 0) {
-        alert(object_name.message1);
+        alert(lens_calculator.message1);
     }
     if (isNaN(result2)) {
-        alert(object_name.message2);
+        alert(lens_calculator.message2);
         document.hoogte.objectafstand.focus();
     }
     if (isNaN(result3)) {
-        alert(object_name.message31);
+        alert(lens_calculator.message31);
         document.hoogte.objecthoogte.focus();
     }
     // Bereken nu het totaal.
@@ -44,7 +44,7 @@ function compute_it_hoogte(form) {
                 parseFloat(SensorHoogtes[result1 - 1]) /
                 parseFloat(document.hoogte.objecthoogte.value));
     } else {
-        document.hoogte.output.value = (object_name.nnb);
+        document.hoogte.output.value = (lens_calculator.nnb);
     }
 }
 
@@ -56,14 +56,14 @@ function compute_it_breedte(form) {
     var result3 = parseFloat(document.breedte.objectbreedte.value);
 
     if (result1 == 0) {
-        alert(object_name.message1);
+        alert(lens_calculator.message1);
     }
     if (isNaN(result2)) {
-        alert(object_name.message2);
+        alert(lens_calculator.message2);
         document.breedte.objectafstand.focus();
     }
     if (isNaN(result3)) {
-        alert(object_name.message32);
+        alert(lens_calculator.message32);
         document.breedte.objectbreedte.focus();
     }
     // Bereken nu het totaal.
@@ -72,6 +72,6 @@ function compute_it_breedte(form) {
                 parseFloat(SensorBreedtes[result1 - 1]) /
                 parseFloat(document.breedte.objectbreedte.value));
     } else {
-        document.breedte.output.value = (object_name.nnb);
+        document.breedte.output.value = (lens_calculator.nnb);
     }
 }

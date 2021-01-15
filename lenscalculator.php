@@ -46,7 +46,7 @@ function register_lens_calulator_scripts() {
 		'message32' => __( 'Breedte van het object graag invullen.', 'lens-calculator' ),
 		'nnb' => __( 'NNB', 'lens-calculator' )
 	);
-	wp_localize_script( 'lens-calculator', 'object_name', $translation_array );
+	wp_localize_script( 'lens-calculator', 'lens_calculator', $translation_array );
 
 	// Enqueued script with localized data.
     wp_enqueue_script( 'lens-calculator' );  
