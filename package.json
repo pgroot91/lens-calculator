@@ -6,9 +6,13 @@
   "license": "GPL-2.0-or-later",
   "author": "Patrick Groot",
   "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
     "@wordpress/env": "^10.28.0",
+    "babel-jest": "^30.0.5",
     "cypress": "^14.5.4",
     "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
     "vite": "^7.1.2"
   },
   "scripts": {
@@ -19,6 +23,6 @@
     "env:destroy": "wp-env destroy",
     "env:stop": "wp-env stop",
     "test:php": "wp-env run tests-cli phpunit",
-    "test:js": "jest tests/unit/js"
+    "test:js": "jest --config=jest.config.cjs"
   }
 }

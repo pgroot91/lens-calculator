@@ -1,4 +1,4 @@
-import { computeHeight, computeWidth } from '../js/lens-calculator-core';
+import { computeHeight, computeWidth } from '@js/lens-calculator-core.js';
 
 const sensors = [
     { width: 12.80, height: 9.60 }, // 1 inch
