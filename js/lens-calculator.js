@@ -1,77 +1,33 @@
-function MakeArray(n) {
-    this.length = n;
-    for (var i = 1; i <= n; i++) {
-        this[i] = 0;
-    }
-    return this;
-}
+import { computeHeight, computeWidth } from './lens-calculator-core.js';
 
-var SensorBreedtes = new MakeArray(6);
-	SensorBreedtes[0] = 12.8;
-	SensorBreedtes[1] = 8.8;
-	SensorBreedtes[2] = 6.4;
-	SensorBreedtes[3] = 4.4;
-	SensorBreedtes[4] = 3.2;
-
-var SensorHoogtes = new MakeArray(6);
-	SensorHoogtes[0] = 9.525;
-	SensorHoogtes[1] = 6.6;
-	SensorHoogtes[2] = 4.8;
-	SensorHoogtes[3] = 3.6;
-	SensorHoogtes[4] = 2.4;
+const sensors = lens_calculator.sensors;
 
 function compute_it_hoogte(form) {
-    var i = 0;
+    const result1 = document.hoogte.answer1.selectedIndex;
+    const result2 = parseFloat(document.hoogte.objectafstand.value);
+    const result3 = parseFloat(document.hoogte.objecthoogte.value);
 
-    var result1 = document.hoogte.answer1.selectedIndex;
-    var result2 = parseFloat(document.hoogte.objectafstand.value);
-    var result3 = parseFloat(document.hoogte.objecthoogte.value);
+    if (result1 === 0) alert(lens_calculator.message1);
+    if (isNaN(result2)) { alert(lens_calculator.message2); document.hoogte.objectafstand.focus(); }
+    if (isNaN(result3)) { alert(lens_calculator.message31); document.hoogte.objecthoogte.focus(); }
 
-    if (result1 == 0) {
-        alert(lens_calculator.message1);
-    }
-    if (isNaN(result2)) {
-        alert(lens_calculator.message2);
-        document.hoogte.objectafstand.focus();
-    }
-    if (isNaN(result3)) {
-        alert(lens_calculator.message31);
-        document.hoogte.objecthoogte.focus();
-    }
-    // Bereken nu het totaal.
-    if (result1 != 0 && !isNaN(result2) && !isNaN(result3)) {
-        document.hoogte.output.value = Math.round(parseFloat(document.hoogte.objectafstand.value) *
-                parseFloat(SensorHoogtes[result1 - 1]) /
-                parseFloat(document.hoogte.objecthoogte.value));
-    } else {
-        document.hoogte.output.value = (lens_calculator.nnb);
-    }
+    const result = computeHeight(result1, result2, result3, sensors);
+    document.hoogte.output.value = result !== null ? result : lens_calculator.nnb;
 }
 
 function compute_it_breedte(form) {
-    var i = 0;
+    const result1 = document.breedte.answer1.selectedIndex;
+    const result2 = parseFloat(document.breedte.objectafstand.value);
+    const result3 = parseFloat(document.breedte.objectbreedte.value);
 
-    var result1 = document.breedte.answer1.selectedIndex;
-    var result2 = parseFloat(document.breedte.objectafstand.value);
-    var result3 = parseFloat(document.breedte.objectbreedte.value);
+    if (result1 === 0) alert(lens_calculator.message1);
+    if (isNaN(result2)) { alert(lens_calculator.message2); document.breedte.objectafstand.focus(); }
+    if (isNaN(result3)) { alert(lens_calculator.message32); document.breedte.objectbreedte.focus(); }
 
-    if (result1 == 0) {
-        alert(lens_calculator.message1);
-    }
-    if (isNaN(result2)) {
-        alert(lens_calculator.message2);
-        document.breedte.objectafstand.focus();
-    }
-    if (isNaN(result3)) {
-        alert(lens_calculator.message32);
-        document.breedte.objectbreedte.focus();
-    }
-    // Bereken nu het totaal.
-    if (result1 != 0 && !isNaN(result2) && !isNaN(result3)) {
-        document.breedte.output.value = Math.round(parseFloat(document.breedte.objectafstand.value) *
-                parseFloat(SensorBreedtes[result1 - 1]) /
-                parseFloat(document.breedte.objectbreedte.value));
-    } else {
-        document.breedte.output.value = (lens_calculator.nnb);
-    }
+    const result = computeWidth(result1, result2, result3, sensors);
+    document.breedte.output.value = result !== null ? result : lens_calculator.nnb;
 }
+
+// Expose to global scope if needed for inline HTML
+window.compute_it_hoogte = compute_it_hoogte;
+window.compute_it_breedte = compute_it_breedte;

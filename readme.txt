@@ -43,6 +43,16 @@ You can use the following shortcodes for displaying the lens calculator.
 
 == Changelog ==
 
+= 2.0.0 =
+* Update readme.
+* Plugin rewrite.
+* Added more sensors for CCTV lenses.
+* Added unit tests js.
+* Added unit tests php.
+* Added e2e tests.
+* Added release workflow.
+* Added a test workflow.
+
 = 1.2.0 =
 * Conditionally load stylesheet and javascript.
 
