@@ -1,0 +1,1 @@
+[![Run Jest Tests](https://github.com/pgroot91/lens-calculator/actions/workflows/jest.yaml/badge.svg)](https://github.com/pgroot91/lens-calculator/actions/workflows/jest.yaml)
