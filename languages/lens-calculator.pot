@@ -4,36 +4,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CCTV Lens Calculator 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lens-calculator\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2025-08-15 22:05:43+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-08-15T19:29:44+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: lens-calculator\n"
-
-#. Plugin Name of the plugin
-#: lens-calculator.php
-msgid "CCTV Lens Calculator"
-msgstr ""
-
-#. Plugin URI of the plugin
-#. Author URI of the plugin
-#: lens-calculator.php
-msgid "http://patrickgroot.com"
-msgstr ""
-
-#. Description of the plugin
-#: lens-calculator.php
-msgid "De lenscalculator kan op twee manieren toegepast worden. U kunt de afstand tot het object bepalen door gebruik te maken van de totale breedte van het object, of door de totale hoogte van het object. Het formaat van het CCD of CMOS element staat meestal bij de specificaties van de camera weergegeven."
-msgstr ""
-
-#. Author of the plugin
-#: lens-calculator.php
-msgid "Patrick Groot"
-msgstr ""
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Patrick Groot <info@patrickgroot.com>\n"
+"Language-Team: Patrick Groot <info@patrickgroot.com>\n"
+"X-Generator: grunt-wp-i18n 1.0.4\n"
 
 #: lens-calculator.php:21
 msgid "1 inch"
@@ -124,78 +102,82 @@ msgid "Lens Calculator"
 msgstr ""
 
 #: lens-calculator.php:124
-msgid "De onderstaande lenscalculator kan op twee manieren toegepast worden. U kunt de afstand tot het object bepalen door gebruik te maken van de totale breedte van het object, of door de totale hoogte van het object. Het formaat van het CCD of CMOS element staat meestal bij de specificaties van de camera weergegeven."
+msgid ""
+"De onderstaande lenscalculator kan op twee manieren toegepast worden. U "
+"kunt de afstand tot het object bepalen door gebruik te maken van de totale "
+"breedte van het object, of door de totale hoogte van het object. Het "
+"formaat van het CCD of CMOS element staat meestal bij de specificaties van "
+"de camera weergegeven."
 msgstr ""
 
-#: lens-calculator.php:126
-#: lens-calculator.php:162
+#: lens-calculator.php:126 lens-calculator.php:162
 msgid "Berekening naar breedte object"
 msgstr ""
 
-#: lens-calculator.php:128
-#: lens-calculator.php:144
-#: lens-calculator.php:164
+#: lens-calculator.php:128 lens-calculator.php:144 lens-calculator.php:164
 #: lens-calculator.php:184
 msgid "Stap 1: Kies het formaat"
 msgstr ""
 
-#: lens-calculator.php:130
-#: lens-calculator.php:146
-#: lens-calculator.php:166
+#: lens-calculator.php:130 lens-calculator.php:146 lens-calculator.php:166
 #: lens-calculator.php:186
 msgid "Stap 2: Wat is de afstand tot het object?"
 msgstr ""
 
-#: lens-calculator.php:132
-#: lens-calculator.php:135
-#: lens-calculator.php:148
-#: lens-calculator.php:151
-#: lens-calculator.php:168
-#: lens-calculator.php:171
-#: lens-calculator.php:188
-#: lens-calculator.php:191
+#: lens-calculator.php:132 lens-calculator.php:135 lens-calculator.php:148
+#: lens-calculator.php:151 lens-calculator.php:168 lens-calculator.php:171
+#: lens-calculator.php:188 lens-calculator.php:191
 msgid "Alleen hele meters gebruiken"
 msgstr ""
 
-#: lens-calculator.php:133
-#: lens-calculator.php:169
+#: lens-calculator.php:133 lens-calculator.php:169
 msgid "Stap 3: Wat is de breedte van het object?"
 msgstr ""
 
-#: lens-calculator.php:137
-#: lens-calculator.php:153
-#: lens-calculator.php:173
+#: lens-calculator.php:137 lens-calculator.php:153 lens-calculator.php:173
 #: lens-calculator.php:193
 msgid "Berekenen"
 msgstr ""
 
-#: lens-calculator.php:137
-#: lens-calculator.php:153
-#: lens-calculator.php:173
+#: lens-calculator.php:137 lens-calculator.php:153 lens-calculator.php:173
 #: lens-calculator.php:193
 msgid "Nieuwe berekening"
 msgstr ""
 
-#: lens-calculator.php:139
-#: lens-calculator.php:155
-#: lens-calculator.php:175
+#: lens-calculator.php:139 lens-calculator.php:155 lens-calculator.php:175
 #: lens-calculator.php:195
 msgid "Gebruik een"
 msgstr ""
 
-#: lens-calculator.php:139
-#: lens-calculator.php:155
-#: lens-calculator.php:175
+#: lens-calculator.php:139 lens-calculator.php:155 lens-calculator.php:175
 #: lens-calculator.php:195
 msgid "mm objectief"
 msgstr ""
 
-#: lens-calculator.php:142
-#: lens-calculator.php:182
+#: lens-calculator.php:142 lens-calculator.php:182
 msgid "Berekening naar hoogte object"
 msgstr ""
 
-#: lens-calculator.php:149
-#: lens-calculator.php:189
+#: lens-calculator.php:149 lens-calculator.php:189
 msgid "Stap 3: Wat is de hoogte van het object?"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "CCTV Lens Calculator"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://patrickgroot.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"De lenscalculator kan op twee manieren toegepast worden. U kunt de afstand "
+"tot het object bepalen door gebruik te maken van de totale breedte van het "
+"object, of door de totale hoogte van het object. Het formaat van het CCD of "
+"CMOS element staat meestal bij de specificaties van de camera weergegeven."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Patrick Groot"
 msgstr ""

@@ -11,6 +11,8 @@
     "@wordpress/env": "^10.28.0",
     "babel-jest": "^30.0.5",
     "cypress": "^14.5.4",
+    "grunt": "^1.6.1",
+    "grunt-wp-i18n": "^1.0.4",
     "husky": "^9.1.7",
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.5",
