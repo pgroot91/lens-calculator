@@ -1,0 +1,54 @@
+name: Unit Tests (PHP)
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: [7.4, 8.0, 8.1, 8.2, 8.3, 8.4]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Set up PHP ${{ matrix.php }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mbstring, intl, mysqli
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist --working-dir=wp-content/plugins/lens-calculator
+
+      - name: Start WordPress environment
+        run: npm run env:start
+
+      - name: Wait for WordPress and MySQL
+        run: |
+          for i in {1..30}; do
+            nc -z localhost 8888 && nc -z localhost 3306 && echo "Environment is ready" && break
+            echo "Waiting for environment..."
+            sleep 2
+          done
+
+      - name: Run unit tests
+        run: npm run test:php
+
+      - name: Stop WordPress environment
+        run: npm run env:stop

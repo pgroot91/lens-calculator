@@ -1,5 +1,5 @@
 <?php
-class Test_Sensors extends WP_UnitTestCase {
+class SensorsTest extends WP_UnitTestCase {
     public function test_sensor_sizes_count() {
         $sensors = wplc_get_sensor_sizes();
         $this->assertCount(15, $sensors, 'Sensor list should have 15 CCTV formats');

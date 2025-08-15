@@ -17,6 +17,9 @@ wp-content/plugins/hello.php
 /sitemap.xml.gz
 
 node_modules
+vendor
+
+.phpunit.result.cache
 
 tests/e2e/cypress/reports
 tests/e2e/cypress/downloads
