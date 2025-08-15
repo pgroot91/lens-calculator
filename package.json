@@ -27,6 +27,7 @@
     "env:stop": "wp-env stop",
     "test:php": "wp-env run --env-cwd='wp-content/plugins/lens-calculator/' tests-cli vendor/bin/phpunit -c phpunit.xml --testdox --verbose",
     "test:js": "jest --config=jest.config.cjs",
-    "makepot": "node scripts/makepot.cjs"
+    "makepot": "npx grunt makepot",
+    "prepare": "husky"
   }
 }
