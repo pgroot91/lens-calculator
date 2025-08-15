@@ -10,7 +10,6 @@ The lens calculator can be applied in two ways. You can determine the distance t
 
   <a href="https://github.com/pgroot91/lens-calculator/actions/workflows/jest.yaml"><img src="https://github.com/pgroot91/lens-calculator/actions/workflows/jest.yaml/badge.svg" alt="
   Unit Tests (JS)"></a>
-
   <a href="https://github.com/pgroot91/lens-calculator/actions/workflows/phpunit.yaml"><img src="https://github.com/pgroot91/lens-calculator/actions/workflows/phpunit.yaml/badge.svg" alt="
   Unit Tests (PHP)"></a>
 
