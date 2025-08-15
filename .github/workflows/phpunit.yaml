@@ -34,7 +34,7 @@ jobs:
           extensions: mbstring, intl, mysqli
 
       - name: Install Composer dependencies
-        run: composer install --no-interaction --prefer-dist --working-dir=wp-content/plugins/lens-calculator
+        run: composer install
 
       - name: Start WordPress environment
         run: npm run env:start
