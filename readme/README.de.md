@@ -1,6 +1,4 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/pgroot91/lens-calculator/blob/master/README.md)
-[![nl](https://img.shields.io/badge/lang-nl-orange.svg)](https://github.com/pgroot91/lens-calculator/blob/master/README.nl.md)
-[![de](https://img.shields.io/badge/lang-de-green.svg)](https://github.com/pgroot91/lens-calculator/blob/master/README.de.md)
 
 # CCTV Lens Calculator for WordPress
 
