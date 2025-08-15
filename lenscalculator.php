@@ -18,21 +18,21 @@
 
 function wplc_get_sensor_sizes() {
     return [
-        ['label' => '1 inch',     'width' => 12.80, 'height' => 9.60],
-        ['label' => '2/3 inch',   'width' => 8.80,  'height' => 6.60],
-        ['label' => '1/1.2 inch', 'width' => 11.20, 'height' => 8.40],
-        ['label' => '1/1.7 inch', 'width' => 7.60,  'height' => 5.70],
-        ['label' => '1/1.8 inch', 'width' => 7.20,  'height' => 5.40],
-        ['label' => '1/2 inch',   'width' => 6.40,  'height' => 4.80],
-        ['label' => '1/2.3 inch', 'width' => 6.17,  'height' => 4.55],
-        ['label' => '1/2.5 inch', 'width' => 5.76,  'height' => 4.29],
-        ['label' => '1/2.7 inch', 'width' => 5.37,  'height' => 4.04],
-        ['label' => '1/3 inch',   'width' => 4.80,  'height' => 3.60],
-        ['label' => '1/3.2 inch', 'width' => 4.54,  'height' => 3.42],
-        ['label' => '1/3.6 inch', 'width' => 4.00,  'height' => 3.00],
-        ['label' => '1/4 inch',   'width' => 3.20,  'height' => 2.40],
-        ['label' => '1/5 inch',   'width' => 2.56,  'height' => 1.92],
-        ['label' => '1/6 inch',   'width' => 2.13,  'height' => 1.60]
+        ['label' => __('1 inch', 'lens-calculator'),     'width' => 12.80, 'height' => 9.60],
+        ['label' => __('2/3 inch', 'lens-calculator'),   'width' => 8.80,  'height' => 6.60],
+        ['label' => __('1/1.2 inch', 'lens-calculator'), 'width' => 11.20, 'height' => 8.40],
+        ['label' => __('1/1.7 inch', 'lens-calculator'), 'width' => 7.60,  'height' => 5.70],
+        ['label' => __('1/1.8 inch', 'lens-calculator'), 'width' => 7.20,  'height' => 5.40],
+        ['label' => __('1/2 inch', 'lens-calculator'),   'width' => 6.40,  'height' => 4.80],
+        ['label' => __('1/2.3 inch', 'lens-calculator'), 'width' => 6.17,  'height' => 4.55],
+        ['label' => __('1/2.5 inch', 'lens-calculator'), 'width' => 5.76,  'height' => 4.29],
+        ['label' => __('1/2.7 inch', 'lens-calculator'), 'width' => 5.37,  'height' => 4.04],
+        ['label' => __('1/3 inch', 'lens-calculator'),   'width' => 4.80,  'height' => 3.60],
+        ['label' => __('1/3.2 inch', 'lens-calculator'), 'width' => 4.54,  'height' => 3.42],
+        ['label' => __('1/3.6 inch', 'lens-calculator'), 'width' => 4.00,  'height' => 3.00],
+        ['label' => __('1/4 inch', 'lens-calculator'),   'width' => 3.20,  'height' => 2.40],
+        ['label' => __('1/5 inch', 'lens-calculator'),   'width' => 2.56,  'height' => 1.92],
+        ['label' => __('1/6 inch', 'lens-calculator'),   'width' => 2.13,  'height' => 1.60]
     ];
 }
 
