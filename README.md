@@ -8,10 +8,7 @@ The lens calculator can be applied in two ways. You can determine the distance t
   <a href="https://php.net/"><img src="https://img.shields.io/badge/Up%20To%20PHP-8.4.6-purple.svg" alt="Up To PHP: 8.4.6"></a>
 
 
-  <a href="https://github.com/pgroot91/lens-calculator/actions/workflows/jest.yaml"><img src="https://github.com/pgroot91/lens-calculator/actions/workflows/jest.yaml/badge.svg" alt="
-  Unit Tests (JS)"></a>
-  <a href="https://github.com/pgroot91/lens-calculator/actions/workflows/phpunit.yaml"><img src="https://github.com/pgroot91/lens-calculator/actions/workflows/phpunit.yaml/badge.svg" alt="
-  Unit Tests (PHP)"></a>  
-  <a href="https://github.com/pgroot91/lens-calculator/actions/workflows/cypress.yaml"><img src="https://github.com/pgroot91/lens-calculator/actions/workflows/cypress.yaml/badge.svg" alt="
-  Unit Tests (PHP)"></a>
+  <a href="https://github.com/pgroot91/lens-calculator/actions/workflows/jest.yaml"><img src="https://github.com/pgroot91/lens-calculator/actions/workflows/jest.yaml/badge.svg" alt="Unit Tests (JS)"></a>
+  <a href="https://github.com/pgroot91/lens-calculator/actions/workflows/phpunit.yaml"><img src="https://github.com/pgroot91/lens-calculator/actions/workflows/phpunit.yaml/badge.svg" alt="Unit Tests (PHP)"></a>  
+  <a href="https://github.com/pgroot91/lens-calculator/actions/workflows/cypress.yaml"><img src="https://github.com/pgroot91/lens-calculator/actions/workflows/cypress.yaml/badge.svg" alt="E2E Tests"></a>
 
