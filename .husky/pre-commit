@@ -1,1 +1,1 @@
-npx grunt makepot
+npm run makepot
