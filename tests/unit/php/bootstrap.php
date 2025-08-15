@@ -18,8 +18,8 @@ require_once $_tests_dir . 'includes/functions.php';
  * Manually load the Example Plugin.
  */
 function _manually_load_plugin() {
-    echo 'Loading Lens Calculator plugin...' . dirname(TESTS_PLUGIN_DIR) . '/lenscalculator.php';
-    require_once dirname(TESTS_PLUGIN_DIR) . '/lenscalculator.php';
+    echo 'Loading Lens Calculator plugin...' . dirname(TESTS_PLUGIN_DIR) . '/lens-calculator.php';
+    require_once dirname(TESTS_PLUGIN_DIR) . '/lens-calculator.php';
 }
 tests_add_filter( 'plugins_loaded', '_manually_load_plugin' );
 
