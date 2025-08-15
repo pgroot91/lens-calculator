@@ -46,6 +46,6 @@ jobs:
           git add wp-content/plugins/lens-calculator/languages/lens-calculator.pot
           git commit -m "Update POT file"
           git push origin $BRANCH
-          gh pr create --title "Update POT file" --body "Auto-generated POT update" --head $BRANCH --base main
+          gh pr create --title "Update POT file" --body "Auto-generated POT update" --head $BRANCH --base master
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
