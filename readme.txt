@@ -1,5 +1,5 @@
 === CCTV Lens Calculator ===
-Tags: cctv, lens, calculator, tools, security, camera, help, correct lenses
+Tags: cctv, lens, lenses, security camera, tools
 Contributors: patrickgroot, krafit, pidengmor
 Collaborators: patrickgroot, krafit, pidengmor
 Requires at least: 5.3

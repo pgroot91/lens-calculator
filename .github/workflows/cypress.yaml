@@ -61,17 +61,6 @@ jobs:
             sleep 5;
           done
 
-      # - name: Run Cypress Tests in ${{ matrix.browser }}
-      #   id: tests
-      #   run: |
-      #     docker run --network host \
-      #       -e CYPRESS_BASE_URL=http://localhost:8889 \
-      #       -v ${{ github.workspace }}:/e2e \
-      #       -w /e2e \
-      #       cypress/included:latest \
-      #       --browser ${{ matrix.browser }} \
-      #       --config baseUrl=http://localhost:8889
-
       - name: Run Cypress Tests in ${{ matrix.browser }}
         run: |
           npx cypress run --browser ${{ matrix.browser }} --config baseUrl=http://localhost:8889
