@@ -38,7 +38,7 @@ jobs:
 
       - name: Verify version matches
         run: |
-          WP_VERSION=$(grep -m 1 "^Version:" lens-calculator.php | awk -F': ' '{print $2}')
+          WP_VERSION=$(grep -m 1 -E "^[[:space:]]*\*?[[:space:]]*Version:" lens-calculator.php | awk -F': ' '{print $2}')
           README_VERSION=$(grep -m 1 "^Stable tag:" readme.txt | awk -F': ' '{print $2}')
           PKG_VERSION=$(node -p "require('./package.json').version")
 
