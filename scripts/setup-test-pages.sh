@@ -1,41 +1,46 @@
 #!/bin/bash
 set -e
 
-# Path to WP-CLI (adjust this to match your system, e.g. /usr/local/bin/wp or vendor/bin/wp)
-WP="npx wp-env run cli wp"
+# Environments to run against
+ENVIRONMENTS=("cli" "tests-cli")
 
-echo "🛠️ Setting up WordPress test data..."
+for ENV in "${ENVIRONMENTS[@]}"; do
+  echo "🔹 Running setup in environment: $ENV"
+  WP="npx wp-env run $ENV wp"
 
-# Create pages
-ID1=$($WP post create --post_type=page --post_title="Page One" --post_status=publish --post_content="[shortcode_one]" --porcelain)
-echo "✅ Created Page One (ID: $ID1)"
+  echo "🛠️ Setting up WordPress test data in $ENV..."
 
-ID2=$($WP post create --post_type=page --post_title="Page Two" --post_status=publish --post_content="[shortcode_two]" --porcelain)
-echo "✅ Created Page Two (ID: $ID2)"
+  # Create pages
+  ID1=$($WP post create --post_type=page --post_title="Page One" --post_status=publish --post_content="[shortcode_one]" --porcelain)
+  echo "✅ Created Page One (ID: $ID1)"
 
-ID3=$($WP post create --post_type=page --post_title="Page Three" --post_status=publish --post_content="[shortcode_three]" --porcelain)
-echo "✅ Created Page Three (ID: $ID3)"
+  ID2=$($WP post create --post_type=page --post_title="Page Two" --post_status=publish --post_content="[shortcode_two]" --porcelain)
+  echo "✅ Created Page Two (ID: $ID2)"
 
-# Create menu if not exists
-if $WP menu list --format=csv | grep -q "Main Menu"; then
-  echo "ℹ️ Main Menu already exists"
-else
-  $WP menu create "Main Menu"
-  echo "✅ Created Main Menu"
-fi
+  ID3=$($WP post create --post_type=page --post_title="Page Three" --post_status=publish --post_content="[shortcode_three]" --porcelain)
+  echo "✅ Created Page Three (ID: $ID3)"
 
-# Add pages to menu
-$WP menu item add-post "main-menu" $ID1 >/dev/null
-echo "📌 Added Page One to Main Menu"
+  # Check or create header template
+  HEADER_ID=$($WP post list --post_type=wp_template_part --field=ID --name=header 2>/dev/null || true)
+  if [ -z "$HEADER_ID" ]; then
+    HEADER_ID=$($WP post create --post_type=wp_template_part --post_title="Header" --post_name="header" --post_status=publish --porcelain)
+    echo "✅ Created header template part (ID: $HEADER_ID)"
+  fi
 
-$WP menu item add-post "main-menu" $ID2 >/dev/null
-echo "📌 Added Page Two to Main Menu"
+  # Create navigation block JSON
+  NAV_JSON="{
+    \"blockName\":\"core/navigation\",
+    \"attrs\":{},
+    \"innerBlocks\":[
+      {\"blockName\":\"core/navigation-link\",\"attrs\":{\"label\":\"Page One\",\"url\":\"$( $WP post get $ID1 --field=guid )\"},\"innerBlocks\":[]},
+      {\"blockName\":\"core/navigation-link\",\"attrs\":{\"label\":\"Page Two\",\"url\":\"$( $WP post get $ID2 --field=guid )\"},\"innerBlocks\":[]},
+      {\"blockName\":\"core/navigation-link\",\"attrs\":{\"label\":\"Page Three\",\"url\":\"$( $WP post get $ID3 --field=guid )\"},\"innerBlocks\":[]}
+    ]
+  }"
 
-$WP menu item add-post "main-menu" $ID3 >/dev/null
-echo "📌 Added Page Three to Main Menu"
+  # Insert navigation block
+  $WP post meta update $HEADER_ID _wp_block_content "$NAV_JSON"
+  echo "📌 Added navigation block with pages to header template"
 
-# Assign menu to primary location
-$WP menu location assign "main-menu" primary
-echo "✅ Assigned Main Menu to primary location"
-
-echo "✨ Setup complete. Pages created: $ID1, $ID2, $ID3"
+  echo "✨ Setup complete in $ENV. Pages: $ID1, $ID2, $ID3"
+done
