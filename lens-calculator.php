@@ -52,7 +52,7 @@ add_action( 'plugins_loaded', 'lens_calculator_textdomain' );
 function register_lens_calulator_styles() {
 	global $post;
 	if( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'full-calculator' ) || has_shortcode( $post->post_content, 'width-calculator' ) || has_shortcode( $post->post_content, 'height-calculator' ) ) {
-		wp_register_style( 'lens-calculator', plugins_url( 'lens-calculator/css/plugin.css' ) );
+		wp_register_style( 'lens-calculator', plugins_url( 'lens-calculator/dist/lens-calculator.min.css' ) );
 		wp_enqueue_style( 'lens-calculator' );
 	}
 }
@@ -65,7 +65,7 @@ add_action( 'wp_enqueue_scripts', 'register_lens_calulator_styles' );
 function register_lens_calulator_scripts() {  
 	global $post;
 	if( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'full-calculator' ) || has_shortcode( $post->post_content, 'width-calculator' ) || has_shortcode( $post->post_content, 'height-calculator' ) ) {
-		wp_register_script( 'lens-calculator', plugins_url( 'lens-calculator/dist/lens-calculator.bundle.js' ) );
+		wp_register_script( 'lens-calculator', plugins_url( 'lens-calculator/dist/lens-calculator.bundle.min.js' ) );
 		$sensor_sizes = wplc_get_sensor_sizes();
 		$translation_array = array(
 			'message1' => __( 'Formaat CCD element graag invullen.', 'lens-calculator' ),
