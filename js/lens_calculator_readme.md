@@ -158,17 +158,17 @@ This ensures reliable calculations and prevents runtime errors.
 ## Formulas Summary
 
 - **Height in pixels:**  
-  `pixels = (distance × sensorHeight) / objectHeight`  
+`pixels = (distance × sensorHeight) / objectHeight`  
 
 - **Width in pixels:**  
-  `pixels = (distance × sensorWidth) / objectWidth`  
+`pixels = (distance × sensorWidth) / objectWidth`  
 
 - **Lens focal length (mm):**  
   ```
-fWidth  = (distance × sensorWidth) / objectWidth
-fHeight = (distance × sensorHeight) / objectHeight
-fAverage = (fWidth + fHeight) / 2
-```
+  fWidth  = (distance × sensorWidth) / objectWidth
+  fHeight = (distance × sensorHeight) / objectHeight
+  fAverage = (fWidth + fHeight) / 2
+  ```
 
 ---
 
