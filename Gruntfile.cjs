@@ -17,16 +17,30 @@ module.exports = function (grunt) {
         options: {
           cwd: "./", // Directory of files to internationalize.
           domainPath: "languages", // Where to save the POT file.
-          exclude: ["node_modules", "vendor", "tests", "docs", "assets/js/lib"], // List of files or directories to ignore.
+          exclude: [
+            "node_modules",
+            "vendor",
+            "tests",
+            "docs",
+            "readme",
+            "language",
+            "dist",
+            "css",
+            "js",
+            "scripts",
+          ], // List of files or directories to ignore.
           i18nToolsPath: "", // Path to the i18n tools directory.
           mainFile: "lens-calculator.php", // Main project file.
           potComments: "", // The copyright at the beginning of the POT file.
           potFilename: "lens-calculator.pot", // Name of the POT file.
           potHeaders: {}, // Headers to add to the generate POT file.
           processPot: function (pot, options) {
-            pot.headers["report-msgid-bugs-to"] = "https://wordpress.org/support/plugin/lens-calculator";
-            pot.headers["language-team"] = "Patrick Groot <info@patrickgroot.com>";
-            pot.headers["last-translator"] = "Patrick Groot <info@patrickgroot.com>";
+            pot.headers["report-msgid-bugs-to"] =
+              "https://wordpress.org/support/plugin/lens-calculator";
+            pot.headers["language-team"] =
+              "Patrick Groot <info@patrickgroot.com>";
+            pot.headers["last-translator"] =
+              "Patrick Groot <info@patrickgroot.com>";
             return pot;
           }, // A callback function for manipulating the POT file.
           type: "wp-plugin", // Type of project (wp-plugin or wp-theme).
