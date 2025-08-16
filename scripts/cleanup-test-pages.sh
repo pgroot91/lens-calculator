@@ -2,7 +2,7 @@
 set -e
 
 # Path to WP-CLI (adjust this to match your system, e.g. /usr/local/bin/wp or vendor/bin/wp)
-WP="php ./vendor/wp-cli/wp-cli/bin/wp"
+WP="npm run --silent env run cli wp"
 
 echo "🧹 Cleaning up test pages and menu..."
 
