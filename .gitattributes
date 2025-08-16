@@ -1,29 +1,41 @@
-# Exclude development and CI files from release archive
-/.github export-ignore
-/node_modules export-ignore
-/tests export-ignore
-/scripts export-ignore
-/docs export-ignore
-/examples export-ignore
+# Node.js / dev tools
+node_modules/ export-ignore
+package.json export-ignore
+package-lock.json export-ignore
+vite.config.js export-ignore
+babel.config.cjs export-ignore
+Gruntfile.cjs export-ignore
+jest.config.cjs export-ignore
+.github/ export-ignore
+.husky/ export-ignore
+.wp-env.json export-ignore
 
-# Config and build files
-/.gitignore export-ignore
-/.editorconfig export-ignore
-/.eslintrc* export-ignore
-/cypress.config.* export-ignore
-/vite.config.js export-ignore
-/babel.config.cjs export-ignore
-/Gruntfile.cjs export-ignore
+# PHP / Composer
+vendor/ export-ignore
+composer.json export-ignore
+composer.lock export-ignore
 
-# Package managers
-/package.json export-ignore
-/package-lock.json export-ignore
-/composer.json export-ignore
-/composer.lock export-ignore
+# Tests
+tests/ export-ignore
+phpunit.xml export-ignore
+phpunit.xml.dist export-ignore
+cypress.config.cjs export-ignore
+cypress.config.dev.cjs export-ignore
+cypress.config.test.cjs export-ignore
 
-# Build and temp files
-/build export-ignore
-/vendor export-ignore
+# Build / dev output
+build/ export-ignore
+css/ export-ignore
+js/ export-ignore
+scripts/ export-ignore
+readme/ export-ignore
+docs/ export-ignore
+examples/ export-ignore
+
+# Git / system files
+.git/ export-ignore
+.gitignore export-ignore
 *.log export-ignore
 *.tmp export-ignore
 *.DS_Store export-ignore
+README.md export-ignore
