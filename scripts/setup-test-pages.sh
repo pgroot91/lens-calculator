@@ -2,7 +2,7 @@
 set -e
 
 # Path to WP-CLI (adjust this to match your system, e.g. /usr/local/bin/wp or vendor/bin/wp)
-WP="./vendor/bin/wp"
+WP="php ./vendor/wp-cli/wp-cli/bin/wp"
 
 echo "🛠️ Setting up WordPress test data..."
 
