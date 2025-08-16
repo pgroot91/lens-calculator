@@ -2,7 +2,7 @@
 set -e
 
 # Environments to clean up
-ENVIRONMENTS=("cli" "tests-cli")
+ENVIRONMENTS=("tests-cli")
 
 for ENV in "${ENVIRONMENTS[@]}"; do
   echo "🔹 Cleaning up in environment: $ENV"
@@ -11,7 +11,7 @@ for ENV in "${ENVIRONMENTS[@]}"; do
   echo "🧹 Cleaning up test pages and menu in $ENV..."
 
   # Delete pages if they exist
-  for title in "Page One" "Page Two" "Page Three"; do
+  for title in "Full Calculator" "Width Calculator" "Height Calculator" "Sample Page"; do
     IDS=$($WP post list --post_type=page --title="$title" --format=ids)
     if [ -n "$IDS" ]; then
       $WP post delete $IDS --force
