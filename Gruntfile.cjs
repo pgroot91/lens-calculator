@@ -23,11 +23,10 @@ module.exports = function (grunt) {
             "tests",
             "docs",
             "readme",
-            "language",
             "dist",
             "css",
             "js",
-            "scripts",
+            "scripts"
           ], // List of files or directories to ignore.
           i18nToolsPath: "", // Path to the i18n tools directory.
           mainFile: "lens-calculator.php", // Main project file.
