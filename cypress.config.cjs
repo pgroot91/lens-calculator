@@ -26,10 +26,10 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       on("task", {
         setupWordPressTestData() {
-          return runScript("scripts/setup-test-pages.sh");
+          return runScript("scripts/setup-test-pages.sh", { cwd: process.cwd() });
         },
         cleanupWordPressTestData() {
-          return runScript("scripts/cleanup-test-pages.sh");
+          return runScript("scripts/cleanup-test-pages.sh", { cwd: process.cwd() });
         },
       });
     },
