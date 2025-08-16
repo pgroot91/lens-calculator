@@ -38,14 +38,9 @@ jobs:
 
       - name: Verify version matches
         run: |
-          # Get the plugin version from the main PHP file
-          WP_VERSION=$(grep -i "^[[:space:]]*\* *Version:" lens-calculator.php | head -1 | awk -F': ' '{gsub(/^[ \t]+|[ \t]+$/, "", $2); print $2}')
-
-          # Get the stable tag version from readme.txt
-          README_VERSION=$(grep -i "^[[:space:]]*Stable tag:" readme.txt | head -1 | awk -F': ' '{gsub(/^[ \t]+|[ \t]+$/, "", $2); print $2}')
-
-          # Get the version from package.json
-          PKG_VERSION=$(node -p "require('./package.json').version")
+          WP_VERSION=$(grep -i "^[[:space:]]*\* *Version:" lens-calculator.php | head -1 | awk -F': ' '{gsub(/\r|^[ \t]+|[ \t]+$/, "", $2); print $2}')
+          README_VERSION=$(grep -i "^[[:space:]]*Stable tag:" readme.txt | head -1 | awk -F': ' '{gsub(/\r|^[ \t]+|[ \t]+$/, "", $2); print $2}')
+          PKG_VERSION=$(node -p "require('./package.json').version.trim()")
           
           if [ "$WP_VERSION" != "${{ env.VERSION }}" ] || [ "$README_VERSION" != "${{ env.VERSION }}" ] || [ "$PKG_VERSION" != "${{ env.VERSION }}" ]; then
             echo "Error: Version mismatch detected!"
