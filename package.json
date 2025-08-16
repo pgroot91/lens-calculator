@@ -16,6 +16,7 @@
     "husky": "^9.1.7",
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.5",
+    "npm-run-all": "^4.1.5",
     "vite": "^7.1.2"
   },
   "scripts": {
@@ -27,10 +28,16 @@
     "env:clean": "wp-env clean",
     "env:destroy": "wp-env destroy",
     "env:stop": "wp-env stop",
+    "env:start:dev": "wp-env start --env=development",
+    "env:start:test": "wp-env start --env=tests",
     "cy:open:launch:dev": "cypress open -b chrome --config-file cypress.config.dev.js",
     "cy:run:launch:dev": "cypress run -b chrome --config-file cypress.config.dev.js",
     "cy:open:launch:test": "cypress open -b chrome --config-file cypress.config.test.js",
     "cy:run:launch:test": "cypress run -b chrome --config-file cypress.config.test.js",
+    "cy:open:dev": "run-s env:destroy env:start:dev cy:open:launch:dev",
+    "cy:run:dev": "run-s env:destroy env:start:dev cy:run:launch:dev",
+    "cy:open:test": "run-s env:destroy env:start:test cy:open:launch:test",
+    "cy:run:test": "run-s env:destroy env:start:test cy:run:launch:test",
     "test:php": "wp-env run --env-cwd='wp-content/plugins/lens-calculator/' tests-cli vendor/bin/phpunit -c phpunit.xml --testdox --verbose",
     "test:js": "jest --config=jest.config.cjs"
   }
