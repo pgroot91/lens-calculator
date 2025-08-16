@@ -1,9 +1,18 @@
-describe('Lens Calculator E2E Tests', () => {
-    beforeEach(() => {
-        cy.visit('/'); // Adjust the URL as needed
-    });
+describe("Lens Calculator E2E Tests", () => {
+  before(() => {
+    cy.task("cleanupWordPressTestData");
+    cy.task("setupWordPressTestData");
+  });
 
-    it('should display the calculator', () => {
-        expect(true).to.be.true; // Placeholder for actual test
-    });
+  after(() => {
+    cy.task("cleanupWordPressTestData");
+  });
+
+  beforeEach(() => {
+    cy.visit("/");
+  });
+
+  it("should display the calculator", () => {
+    expect(true).to.be.true;
+  });
 });

@@ -21,13 +21,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "makepot": "npx grunt makepot",
+    "prepare": "husky",
     "env:start": "wp-env start",
     "env:clean": "wp-env clean",
     "env:destroy": "wp-env destroy",
     "env:stop": "wp-env stop",
+    "cy:open:launch:dev": "cypress open -b chrome --config-file cypress.config.dev.js",
+    "cy:run:launch:dev": "cypress run -b chrome --config-file cypress.config.dev.js",
+    "cy:open:launch:test": "cypress open -b chrome --config-file cypress.config.test.js",
+    "cy:run:launch:test": "cypress run -b chrome --config-file cypress.config.test.js",
     "test:php": "wp-env run --env-cwd='wp-content/plugins/lens-calculator/' tests-cli vendor/bin/phpunit -c phpunit.xml --testdox --verbose",
-    "test:js": "jest --config=jest.config.cjs",
-    "makepot": "npx grunt makepot",
-    "prepare": "husky"
+    "test:js": "jest --config=jest.config.cjs"
   }
 }
