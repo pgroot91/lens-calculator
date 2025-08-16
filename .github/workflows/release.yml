@@ -9,6 +9,7 @@ jobs:
   build:
     name: Build and Release
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -40,7 +41,7 @@ jobs:
           WP_VERSION=$(grep -m 1 "^Version:" lens-calculator.php | awk -F': ' '{print $2}')
           README_VERSION=$(grep -m 1 "^Stable tag:" readme.txt | awk -F': ' '{print $2}')
           PKG_VERSION=$(node -p "require('./package.json').version")
-          
+
           if [ "$WP_VERSION" != "${{ env.VERSION }}" ] || [ "$README_VERSION" != "${{ env.VERSION }}" ] || [ "$PKG_VERSION" != "${{ env.VERSION }}" ]; then
             echo "Error: Version mismatch detected!"
             echo "Tag version: ${{ env.VERSION }}"
@@ -49,7 +50,7 @@ jobs:
             echo "package.json version: $PKG_VERSION"
             exit 1
           fi
-          
+
           echo "All version numbers match: ${{ env.VERSION }}"
 
       - name: Run build process
@@ -58,60 +59,26 @@ jobs:
       - name: Create ZIP file
         run: |
           mkdir -p build
-            zip -r build/lens-calculator-${{ env.VERSION }}.zip . \
-            -x "*.git*" \
-            "node_modules/*" \
-            "vendor/*" \
-            "tests/*" \
-            "build/*" \
-            "css/*" \
-            "js/*" \
-            "scripts/*" \
-            "readme/*" \
-            "*.zip" \
-            "*.log" \
-            "*.tmp" \
-            "*.DS_Store" \
-            "docs/*" \
-            "examples/*" \
-            ".*" \
-            "README.md" \
-            "vite.config.js" \
-            "package.json" \
-            "package-lock.json" \
-            "composer.json" \
-            "composer.lock" \
-            "phpunit.xml" \
-            "phpunit.xml.dist" \
-            "cypress.config.cjs" \
-            "cypress.config.dev.cjs" \
-            "cypress.config.test.cjs" \
-            "babel.config.cjs" \
-            "Gruntfile.cjs" \
+          git archive --format=zip --output=build/lens-calculator-${{ env.VERSION }}.zip HEAD
 
       - name: Create Release
-        id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          files: |
-            build/lens-calculator-${{ env.VERSION }}.zip
+          files: build/lens-calculator-${{ env.VERSION }}.zip
           name: CCTV Lens Calculator ${{ env.VERSION }}
-          draft: true
-          prerelease: true
+          draft: false
+          prerelease: false
           body: |
-            # CCTV Lens Calculator for Wordpress ${{ env.VERSION }}
-            
+            # CCTV Lens Calculator for WordPress ${{ env.VERSION }}
+
             ## What's Changed
-            
-            For a complete list of changes, please refer to the [changelog](https://github.com/pgroot91/lens-calculator/blob/master/readme.txt).
-            
+            See the [changelog](https://github.com/pgroot91/lens-calculator/blob/master/readme.txt).
+
             ## Installation
-            
             1. Download the ZIP file from this release
             2. Upload and activate the plugin in your WordPress installation
-            
+
             ## Notes
-            
             - Compatible with WordPress 5.3+
-            - Requires PHP 7.4.30+
+            - Requires PHP 7.4.30+ (tested also with PHP 8.1)
             - Always backup your site before upgrading
