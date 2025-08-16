@@ -1,0 +1,37 @@
+# Node.js
+node_modules/
+package.json
+package-lock.json
+vite.config.js
+babel.config.cjs
+Gruntfile.cjs
+jest.config.cjs
+.github/
+.husky/
+.wp-env.json
+
+# PHP / Composer
+vendor/
+composer.json
+composer.lock
+
+# Tests
+tests/
+phpunit.xml*
+cypress.config*.cjs
+
+# Build / dev output
+build/
+css/
+js/
+scripts/
+readme/
+docs/
+examples/
+
+# Git / system files
+.git/
+*.log
+*.tmp
+*.DS_Store
+README.md

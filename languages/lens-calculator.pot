@@ -1,139 +1,173 @@
-# Copyright (C) 2016 Lens Calculator
-# This file is distributed under the same license as the Lens Calculator package.
+# Copyright (C) 2025 Patrick Groot
+# This file is distributed under the GPL v2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Lens Calculator 1.0\n"
+"Project-Id-Version: CCTV Lens Calculator 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lens-calculator\n"
-"POT-Creation-Date: 2016-09-27 14:44:20+00:00\n"
+"POT-Creation-Date: 2025-08-16 15:14:17+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Patrick Groot <info@patrickgroot.com>\n"
+"Language-Team: Patrick Groot <info@patrickgroot.com>\n"
+"X-Generator: grunt-wp-i18n 1.0.4\n"
 
-#: lenscalculator.php:47
-msgid "Formaat CCD element graag invullen."
-msgstr ""
-
-#: lenscalculator.php:48
-msgid "Afstand tot object graag invullen."
-msgstr ""
-
-#: lenscalculator.php:49
-msgid "Hoogte van het object graag invullen."
-msgstr ""
-
-#: lenscalculator.php:50
-msgid "Breedte van het object graag invullen."
-msgstr ""
-
-#: lenscalculator.php:51
-msgid "NNB"
-msgstr ""
-
-#. #-#-#-#-#  plugin.pot (Lens Calculator 1.0)  #-#-#-#-#
-#. Plugin Name of the plugin/theme
-#: lenscalculator.php:86
-msgid "Lens Calculator"
-msgstr ""
-
-#: lenscalculator.php:87
-msgid ""
-"De onderstaande lenscalculator kan op twee manieren toegepast worden. U kunt "
-"de afstand tot het object bepalen door gebruik te maken van de totale "
-"breedte van het object, of door de totale hoogte van het object. Het formaat "
-"van het CCD of CMOS element staat meestal bij de specificaties van de camera "
-"weergegeven."
-msgstr ""
-
-#: lenscalculator.php:88 lenscalculator.php:121
-msgid "Berekening naar breedte object"
-msgstr ""
-
-#: lenscalculator.php:90 lenscalculator.php:105 lenscalculator.php:123
-#: lenscalculator.php:141
-msgid "Stap 1: Kies het formaat"
-msgstr ""
-
-#: lenscalculator.php:91 lenscalculator.php:106 lenscalculator.php:124
-#: lenscalculator.php:142
-msgid "Kies formaat CCD of CMOS"
-msgstr ""
-
-#: lenscalculator.php:91 lenscalculator.php:106 lenscalculator.php:124
-#: lenscalculator.php:142
+#: lens-calculator.php:21
 msgid "1 inch"
 msgstr ""
 
-#: lenscalculator.php:91 lenscalculator.php:106 lenscalculator.php:124
-#: lenscalculator.php:142
+#: lens-calculator.php:22
 msgid "2/3 inch"
 msgstr ""
 
-#: lenscalculator.php:91 lenscalculator.php:106 lenscalculator.php:124
-#: lenscalculator.php:142
+#: lens-calculator.php:23
+msgid "1/1.2 inch"
+msgstr ""
+
+#: lens-calculator.php:24
+msgid "1/1.7 inch"
+msgstr ""
+
+#: lens-calculator.php:25
+msgid "1/1.8 inch"
+msgstr ""
+
+#: lens-calculator.php:26
 msgid "1/2 inch"
 msgstr ""
 
-#: lenscalculator.php:91 lenscalculator.php:106 lenscalculator.php:124
-#: lenscalculator.php:142
+#: lens-calculator.php:27
+msgid "1/2.3 inch"
+msgstr ""
+
+#: lens-calculator.php:28
+msgid "1/2.5 inch"
+msgstr ""
+
+#: lens-calculator.php:29
+msgid "1/2.7 inch"
+msgstr ""
+
+#: lens-calculator.php:30
 msgid "1/3 inch"
 msgstr ""
 
-#: lenscalculator.php:91 lenscalculator.php:106 lenscalculator.php:124
-#: lenscalculator.php:142
+#: lens-calculator.php:31
+msgid "1/3.2 inch"
+msgstr ""
+
+#: lens-calculator.php:32
+msgid "1/3.6 inch"
+msgstr ""
+
+#: lens-calculator.php:33
 msgid "1/4 inch"
 msgstr ""
 
-#: lenscalculator.php:92 lenscalculator.php:107 lenscalculator.php:125
-#: lenscalculator.php:143
+#: lens-calculator.php:34
+msgid "1/5 inch"
+msgstr ""
+
+#: lens-calculator.php:35
+msgid "1/6 inch"
+msgstr ""
+
+#: lens-calculator.php:71
+msgid "Formaat CCD element graag invullen."
+msgstr ""
+
+#: lens-calculator.php:72
+msgid "Afstand tot object graag invullen."
+msgstr ""
+
+#: lens-calculator.php:73
+msgid "Hoogte van het object graag invullen."
+msgstr ""
+
+#: lens-calculator.php:74
+msgid "Breedte van het object graag invullen."
+msgstr ""
+
+#: lens-calculator.php:75
+msgid "NNB"
+msgstr ""
+
+#: lens-calculator.php:91
+msgid "Kies formaat CCD of CMOS"
+msgstr ""
+
+#: lens-calculator.php:123
+msgid "Lens Calculator"
+msgstr ""
+
+#: lens-calculator.php:124
+msgid ""
+"De onderstaande lenscalculator kan op twee manieren toegepast worden. U "
+"kunt de afstand tot het object bepalen door gebruik te maken van de totale "
+"breedte van het object, of door de totale hoogte van het object. Het "
+"formaat van het CCD of CMOS element staat meestal bij de specificaties van "
+"de camera weergegeven."
+msgstr ""
+
+#: lens-calculator.php:126 lens-calculator.php:162
+msgid "Berekening naar breedte object"
+msgstr ""
+
+#: lens-calculator.php:128 lens-calculator.php:144 lens-calculator.php:164
+#: lens-calculator.php:184
+msgid "Stap 1: Kies het formaat"
+msgstr ""
+
+#: lens-calculator.php:130 lens-calculator.php:146 lens-calculator.php:166
+#: lens-calculator.php:186
 msgid "Stap 2: Wat is de afstand tot het object?"
 msgstr ""
 
-#: lenscalculator.php:94 lenscalculator.php:97 lenscalculator.php:109
-#: lenscalculator.php:112 lenscalculator.php:127 lenscalculator.php:130
-#: lenscalculator.php:145 lenscalculator.php:148
+#: lens-calculator.php:132 lens-calculator.php:135 lens-calculator.php:148
+#: lens-calculator.php:151 lens-calculator.php:168 lens-calculator.php:171
+#: lens-calculator.php:188 lens-calculator.php:191
 msgid "Alleen hele meters gebruiken"
 msgstr ""
 
-#: lenscalculator.php:95 lenscalculator.php:128
+#: lens-calculator.php:133 lens-calculator.php:169
 msgid "Stap 3: Wat is de breedte van het object?"
 msgstr ""
 
-#: lenscalculator.php:98 lenscalculator.php:113 lenscalculator.php:131
-#: lenscalculator.php:149
+#: lens-calculator.php:137 lens-calculator.php:153 lens-calculator.php:173
+#: lens-calculator.php:193
 msgid "Berekenen"
 msgstr ""
 
-#: lenscalculator.php:98 lenscalculator.php:113 lenscalculator.php:131
-#: lenscalculator.php:149
+#: lens-calculator.php:137 lens-calculator.php:153 lens-calculator.php:173
+#: lens-calculator.php:193
 msgid "Nieuwe berekening"
 msgstr ""
 
-#: lenscalculator.php:101 lenscalculator.php:116 lenscalculator.php:134
-#: lenscalculator.php:152
+#: lens-calculator.php:139 lens-calculator.php:155 lens-calculator.php:175
+#: lens-calculator.php:195
 msgid "Gebruik een"
 msgstr ""
 
-#: lenscalculator.php:101 lenscalculator.php:116 lenscalculator.php:134
-#: lenscalculator.php:152
+#: lens-calculator.php:139 lens-calculator.php:155 lens-calculator.php:175
+#: lens-calculator.php:195
 msgid "mm objectief"
 msgstr ""
 
-#: lenscalculator.php:103 lenscalculator.php:139
+#: lens-calculator.php:142 lens-calculator.php:182
 msgid "Berekening naar hoogte object"
 msgstr ""
 
-#: lenscalculator.php:110 lenscalculator.php:146
+#: lens-calculator.php:149 lens-calculator.php:189
 msgid "Stap 3: Wat is de hoogte van het object?"
 msgstr ""
 
-#. #-#-#-#-#  plugin.pot (Lens Calculator 1.0)  #-#-#-#-#
-#. Plugin URI of the plugin/theme
-#. #-#-#-#-#  plugin.pot (Lens Calculator 1.0)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+msgid "CCTV Lens Calculator"
+msgstr ""
+
 #. Author URI of the plugin/theme
-msgid "http://zaanmedia.com"
+msgid "http://patrickgroot.com"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -145,5 +179,5 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Zaanmedia"
+msgid "Patrick Groot"
 msgstr ""
