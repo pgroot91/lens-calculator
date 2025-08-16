@@ -1,5 +1,5 @@
 const { defineConfig } = require('cypress');
-const baseConfig = require('./cypress.config');
+const baseConfig = require('./cypress.config.cjs');
 
 const e2eOverride = {
     baseUrl: 'http://localhost:8888',
