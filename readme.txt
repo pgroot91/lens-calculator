@@ -43,11 +43,8 @@ You can use the following shortcodes for displaying the lens calculator.
 
 == Changelog ==
 
-= 2.0.3 =
-
-= 2.0.2 =
-* Update reamde.
-* Bump version.
+= 2.0.5 =
+* Fix workflows and releases to github and wordpress.org
 
 = 2.0.1 =
 * Update release workflow.
