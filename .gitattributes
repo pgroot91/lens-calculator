@@ -39,3 +39,5 @@ examples/ export-ignore
 *.tmp export-ignore
 *.DS_Store export-ignore
 README.md export-ignore
+.gitattributes export-ignore
+.distignore export-ignore
