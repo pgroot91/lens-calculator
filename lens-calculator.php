@@ -120,9 +120,7 @@ add_shortcode('full-calculator', 'wplc_volledig_calculator');
 /***********************************************************************************************/
 
 function wplc_full_calculator() {
-	$form = '<h1>' . __( 'Lens Calculator', 'lens-calculator' ) . '</h1>';
-	$form .= '<p>' . __( 'De onderstaande lenscalculator kan op twee manieren toegepast worden. U kunt de afstand tot het object bepalen door gebruik te maken van de totale breedte van het object, of door de totale hoogte van het object. Het formaat van het CCD of CMOS element staat meestal bij de specificaties van de camera weergegeven.', 'lens-calculator' ) . '</p>';
-
+	$form = '<section class="wplc_width_calculator">';
 	$form .= '<h3>' . __( 'Berekening naar breedte object', 'lens-calculator' ) . '</h3>';
 	$form .= '<form name="breedte" autocomplete="off">';
 	$form .= '<label for="breedte-answer">' . __( 'Stap 1: Kies het formaat', 'lens-calculator' ) . '</label>';
@@ -138,7 +136,12 @@ function wplc_full_calculator() {
 	$form .= '</div>';
 	$form .= '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input type="text" name="output" class="wplc_field output" size="5" readonly>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	$form .= '</form>';
+	$form .= '<footer>';
+	$form .= '<p><small><strong>' . __('Disclaimer', 'lens-calculator') . '</strong>: ' . __( 'De berekening is alleen geldig voor objecten die zich recht voor de camera bevinden.', 'lens-calculator' ) . '</small></p>';
+	$form .= '<footer>';
+	$form .= '</section>';
 
+	$form .= '<section class="wplc_height_calculator">';
 	$form .= '<h3>' . __( 'Berekening naar hoogte object', 'lens-calculator' ) . '</h3>';
 	$form .= '<form name="hoogte" autocomplete="off">';
 	$form .= '<label for="hoogte-answer">' . __( 'Stap 1: Kies het formaat', 'lens-calculator' ) . '</label>';
@@ -154,12 +157,17 @@ function wplc_full_calculator() {
 	$form .= '</div>';
 	$form .= '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input type="text" name="output" class="wplc_field output" size="5" readonly>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	$form .= '</form>';
+	$form .= '<footer>';
+	$form .= '<p><small><strong>' . __('Disclaimer', 'lens-calculator') . '</strong>: ' . __( 'De berekening is alleen geldig voor objecten die zich recht voor de camera bevinden.', 'lens-calculator' ) . '</small></p>';
+	$form .= '<footer>';
+	$form .= '</section>';
 
 	return $form;
 }
 
 function wplc_width_calculator() {
-	$form = '<h3>' . __( 'Berekening naar breedte object', 'lens-calculator' ) . '</h3>';
+	$form = '<section class="wplc_height_calculator">';
+	$form .= '<h3>' . __( 'Berekening naar breedte object', 'lens-calculator' ) . '</h3>';
 	$form .= '<form name="breedte" autocomplete="off">';
 	$form .= '<label for="breedte-answer">' . __( 'Stap 1: Kies het formaat', 'lens-calculator' ) . '</label>';
     $form .= wplc_sensor_select('answer1', 'breedte-answer');
@@ -174,12 +182,17 @@ function wplc_width_calculator() {
 	$form .= '</div>';
 	$form .= '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input type="text" name="output" class="wplc_field output" size="5" readonly>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	$form .= '</form>';
+	$form .= '<footer>';
+	$form .= '<p><small><strong>' . __('Disclaimer', 'lens-calculator') . '</strong>: ' . __( 'De berekening is alleen geldig voor objecten die zich recht voor de camera bevinden.', 'lens-calculator' ) . '</small></p>';
+	$form .= '<footer>';
+	$form .= '</section>';
 
 	return $form;
 }
 
 function wplc_height_calculator() {
-	$form = '<h3>' . __( 'Berekening naar hoogte object', 'lens-calculator' ) . '</h3>';
+	$form = '<section class="wplc_height_calculator">';
+	$form .= '<h3>' . __( 'Berekening naar hoogte object', 'lens-calculator' ) . '</h3>';
 	$form .= '<form name="hoogte" autocomplete="off">';
 	$form .= '<label for="hoogte-answer">' . __( 'Stap 1: Kies het formaat', 'lens-calculator' ) . '</label>';
     $form .= wplc_sensor_select('answer1', 'hoogte-answer');
@@ -194,8 +207,16 @@ function wplc_height_calculator() {
 	$form .= '</div>';
 	$form .= '<p>' . __( 'Gebruik een', 'lens-calculator' ) . '<input type="text" name="output" class="wplc_field output" size="5" readonly>' . __( 'mm objectief', 'lens-calculator' ) . '</p>';
 	$form .= '</form>';
+	$form .= '<footer>';
+	$form .= '<p><small><strong>' . __('Disclaimer', 'lens-calculator') . '</strong>: ' . __( 'De berekening is alleen geldig voor objecten die zich recht voor de camera bevinden.', 'lens-calculator' ) . '</small></p>';
+	$form .= '<footer>';
+	$form .= '</section>';
 
 	return $form;
 }
+
+/**
+ * Developer functions
+ */
 
 ?>
