@@ -13,7 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php: [7.4, 8.0, 8.1, 8.2, 8.3, 8.4]
+        wpVersion: ["6.9"]
+        phpVersion: ["7.4", "8.0", "8.3", "8.5"]
 
     steps:
       - name: Checkout code
@@ -27,25 +28,47 @@ jobs:
       - name: Install Node.js dependencies
         run: npm ci
 
-      - name: Set up PHP ${{ matrix.php }}
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php }}
-          extensions: mbstring, intl, mysqli
+      - name: Configure WordPress
+        run: |
+          echo '{"core": "WordPress/WordPress#tags/${{ matrix.wpVersion }}","phpVersion": "${{ matrix.phpVersion }}" }' > .wp-env.override.json
 
       - name: Install Composer dependencies
         run: composer install
 
-      - name: Start WordPress environment
-        run: npm run env:start
+      - name: Start WordPress Environment
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 3
+          command: npm run env:start -- --debug
 
-      - name: Wait for WordPress and MySQL
+      - name: Wait for WordPress to be ready
         run: |
           for i in {1..30}; do
-            nc -z localhost 8888 && nc -z localhost 3306 && echo "Environment is ready" && break
-            echo "Waiting for environment..."
-            sleep 2
+            if curl -s http://localhost:8889 | grep -q "WordPress"; then
+              echo "WordPress is ready";
+              break;
+            fi
+            echo "Waiting for WordPress... ($i/30)";
+            sleep 5;
           done
+
+      - name: Verify WordPress and PHP versions
+        run: |
+          echo "=== WordPress PHP Info ==="
+          npx wp-env run cli php -v
+
+          echo "=== WordPress Version ==="
+          npx wp-env run cli wp core version
+
+          echo "=== Verify matches matrix ==="
+          wp_version=$(npx wp-env run cli wp core version)
+          if [ "$wp_version" != "${{ matrix.wpVersion }}" ]; then
+            echo "❌ WordPress version mismatch! Expected ${{ matrix.wpVersion }}, got $wp_version"
+            exit 1
+          else
+            echo "✅ WordPress version matches matrix: $wp_version"
+          fi
 
       - name: Run unit tests
         run: npm run test:php
