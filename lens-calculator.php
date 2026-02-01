@@ -4,7 +4,7 @@
 * Plugin Name: CCTV Lens Calculator  
 * Plugin URI: http://patrickgroot.com
 * Description: De lenscalculator kan op twee manieren toegepast worden. U kunt de afstand tot het object bepalen door gebruik te maken van de totale breedte van het object, of door de totale hoogte van het object. Het formaat van het CCD of CMOS element staat meestal bij de specificaties van de camera weergegeven.
-* Version: 2.0.6
+* Version: 3.0.0
 * Author: Patrick Groot
 * Author URI: http://patrickgroot.com
 * Text Domain: lens-calculator
@@ -17,7 +17,7 @@
 /* How to use: echo('CCTV_LENS_CALCULATOR_VERSION'); */
 /***********************************************************************************************/
 
-define ('CCTV_LENS_CALCULATOR_VERSION', '2.0.6');
+define ('CCTV_LENS_CALCULATOR_VERSION', '3.0.0');
 
 /***********************************************************************************************/
 /* Define CCTV sensor sizes (width × height in mm) */
