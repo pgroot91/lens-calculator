@@ -13,8 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php: ["7.4", "8.0", "8.1", "8.2", "8.3", "8.4"]
-        browser: ["chrome", "firefox"]
+        wp: ["6.9"]
+        php: ["8.5"]
+        browser: ["chrome", "firefox", "webkit"]
         
     steps:
       - name: Checkout code
@@ -23,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Cache NPM dependencies
         uses: actions/cache@v3
@@ -31,8 +32,29 @@ jobs:
           path: ~/.npm
           key: ${{ runner.os }}-npm-cache
 
+      - name: Cache Cypress binary
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/Cypress
+          key: ${{ runner.os }}-cypress-${{ hashFiles('package-lock.json') }}
+
+      - name: Cache Playwright browsers
+        if: runner.os == 'Linux' && matrix.browser == 'webkit'
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
+
       - name: Install NPM dependencies
         run: npm ci
+
+      - name: Install WebKit system dependencies (Linux)
+        if: runner.os == 'Linux' && matrix.browser == 'webkit'
+        run: npx playwright install-deps webkit
+
+      - name: Install Playwright browsers
+        if: matrix.browser == 'webkit'
+        run: npx playwright install webkit
 
       - name: Cache Composer dependencies
         uses: actions/cache@v3
@@ -45,10 +67,14 @@ jobs:
 
       - name: Set PHP version for wp-env
         run: |
-          echo "{\"config\": {\"phpVersion\": \"${{ matrix.php }}\"}}" > .wp-env.override.json
+          echo '{"core": "WordPress/WordPress#tags/${{ matrix.wp }}","phpVersion": "${{ matrix.php }}" }' > .wp-env.override.json
 
       - name: Start WordPress Environment
-        run: npm run env:start
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 3
+          command: npm run env:start -- --debug
 
       - name: Wait for WordPress to be ready
         run: |
@@ -60,6 +86,23 @@ jobs:
             echo "Waiting for WordPress... ($i/30)";
             sleep 5;
           done
+
+      - name: Verify WordPress and PHP versions
+        run: |
+          echo "=== WordPress PHP Info ==="
+          npx wp-env run cli php -v
+
+          echo "=== WordPress Version ==="
+          npx wp-env run cli wp core version
+
+          echo "=== Verify matches matrix ==="
+          wp_version=$(npx wp-env run cli wp core version)
+          if [ "$wp_version" != "${{ matrix.wp }}" ]; then
+            echo "❌ WordPress version mismatch! Expected ${{ matrix.php }}, got $wp_version"
+            exit 1
+          else
+            echo "✅ WordPress version matches matrix: $wp_version"
+          fi
 
       - name: Run Cypress Tests in ${{ matrix.browser }}
         run: |
@@ -74,7 +117,7 @@ jobs:
         continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-screenshots-${{ matrix.php }}-${{ matrix.browser }}
+          name: cypress-screenshots-${{ matrix.wp }}-${{ matrix.php }}-${{ matrix.browser }}
           path: tests/e2e/cypress/screenshots
 
       - name: Upload Cypress videos
@@ -82,7 +125,7 @@ jobs:
         continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-videos-${{ matrix.php }}-${{ matrix.browser }}
+          name: cypress-videos-${{ matrix.wp }}-${{ matrix.php }}-${{ matrix.browser }}
           path: tests/e2e/cypress/videos
 
       - name: Fail job if tests failed
