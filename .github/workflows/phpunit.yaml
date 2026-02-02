@@ -9,7 +9,7 @@ on:
       - "master"
 
 jobs:
-  Unit-Tests-PHP:
+  tests:
     runs-on: ubuntu-latest
     strategy:
       matrix:
