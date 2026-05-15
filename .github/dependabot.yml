@@ -1,20 +1,46 @@
 version: 2
 
 updates:
-  # JavaScript (npm)
   - package-ecosystem: "npm"
     directory: "/"
+
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
+
+    allow:
+      - dependency-type: "direct"
+
+    groups:
+      testing:
+        patterns:
+          - "jest*"
+          - "@playwright/*"
+          - "cypress"
+
+      wordpress:
+        patterns:
+          - "@wordpress/*"
+
+      build:
+        patterns:
+          - "vite"
+          - "@babel/*"
+
+    open-pull-requests-limit: 5
+
     labels:
       - "dependencies"
 
-  # PHP (Composer)
   - package-ecosystem: "composer"
     directory: "/"
+
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 5
+
+    allow:
+      - dependency-type: "direct"
+
+    open-pull-requests-limit: 3
+
     labels:
       - "dependencies"
