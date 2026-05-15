@@ -10,7 +10,7 @@
     "@babel/preset-env": "^7.28.0",
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.3.3",
-    "@wordpress/env": "^10.28.0",
+    "@wordpress/env": "^11.6.0",
     "babel-jest": "^30.0.5",
     "cross-env": "^10.1.0",
     "cross-var": "^1.1.0",
