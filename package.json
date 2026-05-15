@@ -6,7 +6,7 @@
   "license": "GPL-2.0-or-later",
   "author": "Patrick Groot",
   "devDependencies": {
-    "@babel/core": "^7.28.0",
+    "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.28.0",
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.3.3",
