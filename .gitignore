@@ -23,3 +23,12 @@ vendor
 
 tests/e2e/cypress/reports
 tests/e2e/cypress/downloads
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Jest
+/coverage

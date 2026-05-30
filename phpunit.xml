@@ -1,10 +1,25 @@
 <?xml version="1.0"?>
 <phpunit bootstrap="tests/unit/php/bootstrap.php"
-         colors="true"
-         stopOnFailure="false">
+    colors="true"
+    stopOnFailure="false">
     <testsuites>
         <testsuite name="Plugin Test Suite">
             <directory suffix="-test.php">tests/unit/php</directory>
         </testsuite>
     </testsuites>
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./</directory>
+        </include>
+        <exclude>
+            <directory>tests</directory>
+            <directory>vendor</directory>
+        </exclude>
+
+        <report>
+            <html outputDirectory="coverage/php" />
+            <text outputFile="php://stdout" />
+        </report>
+    </coverage>
+
 </phpunit>

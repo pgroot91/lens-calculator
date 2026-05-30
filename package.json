@@ -6,22 +6,24 @@
   "license": "GPL-2.0-or-later",
   "author": "Patrick Groot",
   "devDependencies": {
-    "@babel/core": "^7.28.0",
-    "@babel/preset-env": "^7.28.0",
-    "@playwright/test": "^1.55.0",
-    "@types/node": "^24.3.3",
-    "@wordpress/env": "^10.28.0",
-    "babel-jest": "^30.0.5",
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@cypress/code-coverage": "^4.0.3",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
+    "@wordpress/env": "^10.38.0",
+    "babel-jest": "^30.4.1",
+    "babel-plugin-istanbul": "^8.0.0",
     "cross-env": "^10.1.0",
-    "cross-var": "^1.1.0",
-    "cypress": "^14.5.4",
-    "grunt": "^1.6.1",
+    "cypress": "^15.16.0",
+    "grunt": "^1.6.2",
     "grunt-wp-i18n": "^1.0.4",
     "husky": "^9.1.7",
-    "jest": "^30.0.5",
-    "jest-environment-jsdom": "^30.0.5",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
     "npm-run-all": "^4.1.5",
-    "vite": "^7.1.2"
+    "vite": "^8.0.14",
+    "vite-plugin-istanbul": "^9.0.1"
   },
   "scripts": {
     "dev": "vite",
@@ -42,7 +44,7 @@
     "cy:run:dev": "run-s env:destroy env:start:dev cy:run:launch:dev",
     "cy:open:test": "run-s env:destroy env:start:test cy:open:launch:test",
     "cy:run:test": "run-s env:destroy env:start:test cy:run:launch:test",
-    "test:php": "wp-env run --env-cwd='wp-content/plugins/lens-calculator/' tests-cli vendor/bin/phpunit -c phpunit.xml --testdox --verbose",
-    "test:js": "jest --config=jest.config.cjs"
+    "test:php": "wp-env run --env-cwd='wp-content/plugins/lens-calculator/' tests-cli vendor/bin/phpunit -c phpunit.xml --testdox --verbose --coverage-text --coverage-html coverage/php",
+    "test:js": "jest --config=jest.config.cjs --coverage"
   }
 }

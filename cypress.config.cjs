@@ -32,6 +32,7 @@ module.exports = defineConfig({
           return runScript("scripts/cleanup-test-pages.sh", { cwd: process.cwd() });
         },
       });
+      return config;
     },
   },
 });

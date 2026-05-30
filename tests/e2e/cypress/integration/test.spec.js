@@ -5,10 +5,6 @@ describe("Lens Calculator E2E Tests", () => {
     });
   });
 
-  after(() => {
-    cy.task("cleanupWordPressTestData", null, { timeout: 180000 });
-  });
-
   beforeEach(() => {
     cy.visit("/");
   });

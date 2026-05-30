@@ -16,4 +16,30 @@ module.exports = {
       useESM: true,
     },
   },
+
+  // ✅ ADDITIONS BELOW (non-breaking)
+
+  collectCoverage: true,
+  coverageDirectory: "coverage/js",
+  coverageReporters: ["text", "lcov", "html"],
+
+  collectCoverageFrom: [
+    "js/**/*.js",
+    "!js/**/*.test.js",
+    "!**/node_modules/**"
+  ],
+
+  coveragePathIgnorePatterns: [
+    "/node_modules/",
+    "/tests/"
+  ],
+
+  coverageThreshold: {
+    global: {
+      branches: 70,
+      functions: 75,
+      lines: 80,
+      statements: 80,
+    },
+  },
 };
