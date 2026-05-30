@@ -1,3 +1,7 @@
+export function roundedValue(value) {
+  return value !== null && !isNaN(value) ? Number(value.toFixed(1)) : null;
+}
+
 /**
  * Compute required pixel height of the object in the sensor image.
  *
@@ -19,7 +23,7 @@ export function computeHeight(sensorIndex, distance, objectHeight, sensors) {
     if (sensorIndex === 0 || isNaN(distance) || isNaN(objectHeight)) {
         return null;
     }
-    return Math.round(distance * sensors[sensorIndex - 1].height / objectHeight);
+    return roundedValue(distance * sensors[sensorIndex - 1].height / objectHeight);
 }
 
 /**
@@ -43,7 +47,7 @@ export function computeWidth(sensorIndex, distance, objectWidth, sensors) {
     if (sensorIndex === 0 || isNaN(distance) || isNaN(objectWidth)) {
         return null;
     }
-    return Math.round(distance * sensors[sensorIndex - 1].width / objectWidth);
+    return roundedValue(distance * sensors[sensorIndex - 1].width / objectWidth);
 }
 
 /**
@@ -75,7 +79,7 @@ export function computeFocalLength(sensorIndex, distance, objectSize, axis, sens
     const D = distance * 1000;  // convert meters → mm
     const O = objectSize * 1000; // convert meters → mm
 
-    return Math.round((D * sensorSize) / O);
+    return roundedValue((D * sensorSize) / O);
 }
 
 /**
@@ -92,7 +96,7 @@ export function computeAverageFocal(focalWidth, focalHeight) {
     if (focalWidth === null && focalHeight === null) return null;
     if (focalWidth === null) return focalHeight;
     if (focalHeight === null) return focalWidth;
-    return Math.round((focalWidth + focalHeight) / 2);
+    return roundedValue((focalWidth + focalHeight) / 2);
 }
 
 /**
@@ -116,3 +120,52 @@ export function nearestStandardLens(focalLength) {
         Math.abs(curr - focalLength) < Math.abs(prev - focalLength) ? curr : prev
     );
 }
+
+/**
+ * Suggests two standard lenses that are closest to the given focal length.
+ *
+ * Why two lenses?  
+ * In real-world photography, standard lens sizes don’t exist for every number.  
+ * For example, if your calculated need is ~67mm, the closest available lenses  
+ * are 50mm and 85mm. Both could be valid choices depending on preference,  
+ * framing, and availability. Suggesting a range is more practical than forcing  
+ * just one "nearest" lens.
+ *
+ * @param {number|null} focalLength - The calculated focal length (e.g. 67).
+ * @param {number} [tolerance=0.7] - Percentage tolerance for range suggestion (default 70%).
+ * @returns {number[]} An array with up to 2 suggested lenses, sorted ascending.
+ *                     Example: nearestRangeOfLenses(67) → [50, 85]
+ */
+export function nearestRangeStandardLenses(focalLength, tolerance = 0.85) {
+  if (focalLength === null) return null;
+
+  const standardLenses = [8, 12, 16, 24, 25, 28, 35, 50, 85, 100, 135, 200, 300, 400];
+
+  // Find nearest lens
+  let nearest = standardLenses.reduce((prev, curr) =>
+    Math.abs(curr - focalLength) < Math.abs(prev - focalLength) ? curr : prev
+  );
+
+  // Find neighbors (lens below and above)
+  let lower = null, upper = null;
+  for (let i = 0; i < standardLenses.length; i++) {
+    if (standardLenses[i] <= focalLength) lower = standardLenses[i];
+    if (standardLenses[i] >= focalLength) {
+      upper = standardLenses[i];
+      break;
+    }
+  }
+
+  // If we have both sides, check tolerance
+  if (lower !== null && upper !== null && lower !== upper) {
+    const middle = (lower + upper) / 2;
+    const range = (upper - lower) * tolerance; // 70% of the gap
+    if (Math.abs(focalLength - middle) <= range / 2) {
+      return [lower, upper]; // return both
+    }
+  }
+
+  // Otherwise, return nearest single
+  return nearest;
+}
+
