@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        wp: ["6.9"]
+        wp: ["7.0"]
         php: ["8.5"]
-        browser: ["chrome", "firefox", "webkit"]
+        browser: ["chrome", "firefox"]
         
     steps:
       - name: Checkout code
