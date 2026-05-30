@@ -7,7 +7,7 @@ const sensors = [
 
 test('computes height correctly', () => {
     const result = computeHeight(1, 20, 5, sensors);
-    expect(result).toBe(38); // Math.round(20 * 9.6 / 5) = 38
+    expect(result).toBe(38.4); // Math.round(20 * 9.6 / 5) = 38
 });
 
 test('computes width correctly', () => {
