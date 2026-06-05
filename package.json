@@ -11,7 +11,7 @@
     "@cypress/code-coverage": "^4.0.3",
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.9.1",
-    "@wordpress/env": "^10.38.0",
+    "@wordpress/env": "^11.8.0",
     "babel-jest": "^30.4.1",
     "babel-plugin-istanbul": "^8.0.0",
     "cross-env": "^10.1.0",
