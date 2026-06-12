@@ -10,7 +10,7 @@
     "@babel/preset-env": "^7.29.7",
     "@cypress/code-coverage": "^4.0.3",
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.1",
+    "@types/node": "^25.9.3",
     "@wordpress/env": "^10.38.0",
     "babel-jest": "^30.4.1",
     "babel-plugin-istanbul": "^8.0.0",
